@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>112</y>
+      <w>152</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Driver
+-
+_+ main( args : String[]) : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>176</y>
+      <w>144</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+Race
+--
+Dwarves,
+Elves,
+Gnomes,
+Half-Elves,
+Half-Orcs,
+Halflings,
+Humans</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>368</y>
+      <w>144</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+Class
+--
+Barbarian,
+Bard,
+Cleric,
+Druid,
+Fighter,
+Monk,
+Paladin,
+Ranger,
+Rogue,
+Sorcerer,
+Wizard</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1576</x>
+      <y>440</y>
+      <w>248</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>CharacterSheet
+--
+Stats : Ability Scores and Character Information
+
+Combat : Defensive and Offensive Information
+
+Skills : Skills
+
+Abilities : Special Abilities, Traits, and Feats
+
+Spells: Spells</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>96</y>
+      <w>184</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>Weapon
+--
+-name : String
+-value : int
+-range : String
+-damage : String
+-attackBonus : int
+-critical : String
+-type : String
+-notes : String
+--
+Getters(FOR ALL OF THEM)
+
+Setters(FOR ALL OF THEM)
+
++Weapon(name : String, value : int,
+range : String, damage : String,
+attackBonus : int, critical : String,
+type : String, notes : String)&lt;&lt;ctor&gt;&gt;
+
++Weapon()&lt;&lt;ctor&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>96</y>
+      <w>216</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>Spell
+--
+-name : String
+-level : int
+-school : String
+-subschool : String
+-prepared : int
+-cast : int
+-notes : String
+-description : String
+--
+Getters(FOR ALL OF THEM)
+
+Setters(FOR ALL OF THEM)
+
++Spell(name : String, level : int,
+school : String, subschool : String,
+prepared : int, cast : int,
+description : String, notes : String)&lt;&lt;ctor&gt;&gt;
+
++Spell() &lt;&lt;ctor&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1208</x>
+      <y>776</y>
+      <w>280</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>FileManager
+--
+
+--
++formatInfo(character : CharacterSheet) : String
++writeToFile(pathName : String) : boolean
++readFromFile(pathName : String) : CharacterSheet</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>368</y>
+      <w>192</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+-name : String
+-value : int
+-location : String
+-type : String
+-description : String
+--
+Getters(FOR ALL OF THEM)
+
+Setters(FOR ALL OF THEM)
+
++Item(name : String, value : int,
+location : String, type : String,
+description : String)&lt;&lt;ctor&gt;&gt;
+
++Item() &lt;&lt;ctor&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1208</x>
+      <y>880</y>
+      <w>280</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>FileEditor
+--
+
+--
++sanitize (sheet : CharacterSheet) : boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1208</x>
+      <y>672</y>
+      <w>280</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>FileGenerator
+--
+
+--
++randomAbilityScore() : int
++randomizeSkills() : HashMap&lt;NameOfSkills&gt;&lt;Skill&gt;
++startRandomCharacter(name : String, 
+class : Class, race : Race, level : int) : CharacterSheet</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1632</x>
+      <y>112</y>
+      <w>136</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>GuiCommunication
+--
+Handles all GUI I/O</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>640</y>
+      <w>192</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>Armor
+--
+-name : String
+-value : int
+-type : String
+-bonus : int
+-penalty : int
+-spellFailure : int
+-weight : int
+-properties : String
+--
+Getters(FOR ALL OF THEM)
+
+Setters(FOR ALL OF THEM)
+
++Armor(name : String, value : int,
+type : String, bonus : int,
+penalty : int, spellFailure : int,
+weight : int, properties : String)&lt;&lt;ctor&gt;&gt;
+
++Armor() &lt;&lt;ctor&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>608</y>
+      <w>168</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>Abilitiy
+--
+-name : String
+-type : String
+-notes : String
+-abilityType : AbilityType
+--
+Getters(FOR ALL OF THEM)
+
+Setters(FOR ALL OF THEM)
+
++Ability(name : String,
+abilityType : AbilityType,
+type : String,
+notes : String)&lt;&lt;ctor&gt;&gt;
+
++Ability() &lt;&lt;ctor&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1584</x>
+      <y>184</y>
+      <w>240</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Main Menu
+--
+Manual Character Creation
+Randomized Character Creation
+Load a Previous Character
+
+**On load prompts for save/load location*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1696</x>
+      <y>328</y>
+      <w>184</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>RandomizedSelector
+--
+Enter Race, Class, and Level
+(This allows it to finde the correct
+template)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1648</x>
+      <y>264</y>
+      <w>24</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1816</x>
+      <y>264</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1816</x>
+      <y>392</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1688</x>
+      <y>152</y>
+      <w>24</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>424</y>
+      <w>224</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>CharacterSheet
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>496</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+AbilityType
+--
+Special Ability,
+Trait,
+Feat</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>584</x>
+      <y>568</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1472</x>
+      <y>112</y>
+      <w>96</w>
+      <h>536</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+NameOfSkill
+--
+Acrobatics,
+Appraise,
+Bluff,
+Climb,
+Craft1,
+Craft2,
+Craft3,
+Diplomacy,
+Disable Device,
+Disguise,
+Escape Artist,
+Fly,
+Handle Animal,
+Heal,
+Intimidate,
+Knowledge(A),
+Knowledge(D),
+Knowledge(E),
+Knowledge(G),
+Knowledge(H),
+Knowledge(L),
+Knowledge(Na),
+Knowledge(No),
+Knowledge(P),
+Knowledge(R),
+Linguistics,
+Perception,
+Perform1,
+Perform2,
+Profession1,
+Profession2,
+Ride,
+SenseMotive,
+SleightOfHand,
+Spellcraft,
+Stealth,
+Survival,
+Swim,
+UseMagicDevice</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>648</x>
+      <y>768</y>
+      <w>192</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Skill
+--
+-name : NameOfSkill&lt;&lt;FINAL&gt;&gt;
+-ability : SkillTiedAbility &lt;&lt;final&gt;&gt;
+-rank : int
+-miscMod : int
+--
+Getters and Setters for rank and misc
+
++getTotal() : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>872</x>
+      <y>768</y>
+      <w>88</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+SkillTiedAbility
+--
+STR,
+DEX,
+INT,
+WIS,
+CHA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>760</y>
+      <w>56</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>344</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>344</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>416</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>520</y>
+      <w>168</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;220.0;10.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>520</y>
+      <w>24</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;310.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>312</y>
+      <w>224</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;220.0;60.0;220.0;190.0;260.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>536</x>
+      <y>376</y>
+      <w>168</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;130.0;190.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>520</y>
+      <w>72</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;50.0;180.0;50.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1344</x>
+      <y>384</y>
+      <w>96</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+Alignment
+--
+Lawful Good,
+Neutral Good,
+Choatic Good,
+Lawful Neutral,
+True Neutral,
+Choatic Neutral,
+Lawful Evil,
+Neutral Evil,
+Choatic Evil</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1224</x>
+      <y>368</y>
+      <w>96</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+Deity
+--
+Abadar,
+Asmodeus,
+Calistria,
+Cayden Cailean,
+Desna,
+Erastil,
+Gorum,
+Gozreh,
+Iomedae,
+Irori,
+Lamashtu,
+Nethys,
+Norgorber,
+Pharasma,
+Rovagug,
+Sarenrae,
+Shelyn,
+Torag,
+Urgathoa,
+Zon-Kuthon</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>672</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ENUM&gt;&gt;
+Gender
+--
+Male,
+Female,
+Not Applicable,</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>520</y>
+      <w>24</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>352</y>
+      <w>552</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>670.0;40.0;670.0;10.0;10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>520</y>
+      <w>336</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>400.0;140.0;10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1104</x>
+      <y>1152</y>
+      <w>224</w>
+      <h>1192</h>
+    </coordinates>
+    <panel_attributes>CharacterSheet
+--
+-name : String
+-alignment : Alignment
+-playerName : String
+-class : Class
+-level : int
+-deity : Deity
+-homeland : String
+-race : Race
+-size : String
+-gender : Gender
+-age : int
+-height : String
+-weight : int
+-hair : String
+-eyes : String
+-strBase : int
+-strMod : int
+-strTemp : int
+-strTempMod : int
+-dexBase : int
+-dexMod : int
+-dexTemp : int
+-dexTempMod : int
+-conBase : int
+-conMod : int
+-conTemp : int
+-conTempMod : int
+-intBase : int
+-intMod : int
+-intTemp : int
+-intTempMod : int
+-wisBase : int
+-wisMod : int
+-wisTemp : int
+-wisTempMod : int
+-chaBase : int
+-chaMod : int
+-chaTemp : int
+-chaTempMod : int
+-baseHP : int
+-curHP : int
+-baseSpeed : int
+-speedWithArmor : int
+-flySpeed : int
+-swimSpeed : int
+-climbSpeed : int
+-burrowSpeed : int
+-speedMod : int
+-nonLethalDamage : int
+-weapons : ArrayList&lt;Weapon&gt;
+-armor : ArrayList&lt;Armor&gt;
+-items : ArrayList&lt;Item&gt;
+-spells : ArrayList&lt;Spell&gt;
+-armorBonus : int
+-shieldBonus : int
+-sizeArmorMod : int
+-naturalArmor : int
+-deflectArmorMod : int
+-miscArmorMod : int
+-initiativeMod : int
+-miscInitiativeMod : int
+-baseSaveF : int
+-baseSaveR : int
+-baseSaveW : int
+-magicModF : int
+-magicModR : int
+-magicModW : int
+-miscModF : int
+-miscModR : int
+-miscModW : int
+-tempModF : int
+-tempModR : int
+-tempModW : int
+-baseAttackBonus : int
+-experience : int
+-expToNextLvl : int
+-CP : int
+-SP : int
+-GP : int
+-PP : int
+-spellResistance : String
+-skills : HashMap&lt;NamesOfSkills&gt;&lt;Skill&gt;
+-abilities : ArrayList&lt;Ability&gt;
+--
++getTouchAC() : int
++getFlatFootedAC() : int
++getCMB() : int
++getCMD() : int
+Getters(For everything)
+
+Setters(For everything)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>520</y>
+      <w>728</w>
+      <h>504</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0;230.0;280.0;230.0;610.0;890.0;610.0;890.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>640</y>
+      <w>832</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>1020.0;10.0;1020.0;480.0;10.0;480.0;10.0;310.0</additional_attributes>
+  </element>
+</diagram>
