@@ -1,5 +1,7 @@
 package models;
 
+import enums.AbilityType;
+
 public class Ability {
 	private String name;
 	private String type;
