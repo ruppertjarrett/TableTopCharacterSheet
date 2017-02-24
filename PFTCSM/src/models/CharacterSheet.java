@@ -2,7 +2,6 @@ package models;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import enums.Alignment;
 import enums.Class;
 import enums.Deity;
@@ -31,103 +30,6 @@ public class CharacterSheet
 	ArrayList<Spell> spells = new ArrayList<>();
 	ArrayList<Ability> abilities = new ArrayList<>();
 	HashMap<NameOfSkill, Skill> skills = new HashMap<>();
-	
-	public CharacterSheet(){
-	}
-
-	public CharacterSheet(int level, int age, int weight, int strBase, int strMod, int strTemp, int strTempMod,
-			int dexBase, int dexMod, int dexTemp, int dexTempMod, int conBase, int conMod, int conTemp, int conTempMod,
-			int intBase, int intMod, int intTemp, int intTempMod, int wisBase, int wisMod, int wisTemp, int wisTempMod,
-			int baseHP, int curHP, int baseSpeed, int speedWithArmor, int flySpeed, int swimSpeed, int climbSpeed,
-			int burrowSpeed, int speedMod, int nonlethalDamage, int armorBonus, int shieldBonus, int sizeArmorMod,
-			int naturalArmor, int deflectArmorMod, int miscArmorMod, int initiativeMod, int miscInitiativeMod,
-			int baseSaveF, int baseSaveR, int baseSaveW, int magicModF, int miscModF, int tempModF, int magicModR,
-			int miscModR, int tempModR, int magicModW, int miscModW, int tempModW, int baseAttackBonus, int experience,
-			int expToNextLvl, int cP, int sP, int gP, int pP, String name, String homeland, String size, String height,
-			String hair, String eyes, String spellResistance, Class charClass, Alignment alignment, Deity deity,
-			Race race, Gender gender, ArrayList<Weapon> weapons, ArrayList<Armor> armor, ArrayList<Item> items,
-			ArrayList<Spell> spells, ArrayList<Ability> abilities, HashMap<NameOfSkill, Skill> skills)
-	{
-		super();
-		this.level = level;
-		this.age = age;
-		this.weight = weight;
-		this.strBase = strBase;
-		this.strMod = strMod;
-		this.strTemp = strTemp;
-		this.strTempMod = strTempMod;
-		this.dexBase = dexBase;
-		this.dexMod = dexMod;
-		this.dexTemp = dexTemp;
-		this.dexTempMod = dexTempMod;
-		this.conBase = conBase;
-		this.conMod = conMod;
-		this.conTemp = conTemp;
-		this.conTempMod = conTempMod;
-		this.intBase = intBase;
-		this.intMod = intMod;
-		this.intTemp = intTemp;
-		this.intTempMod = intTempMod;
-		this.wisBase = wisBase;
-		this.wisMod = wisMod;
-		this.wisTemp = wisTemp;
-		this.wisTempMod = wisTempMod;
-		this.baseHP = baseHP;
-		this.curHP = curHP;
-		this.baseSpeed = baseSpeed;
-		this.speedWithArmor = speedWithArmor;
-		this.flySpeed = flySpeed;
-		this.swimSpeed = swimSpeed;
-		this.climbSpeed = climbSpeed;
-		this.burrowSpeed = burrowSpeed;
-		this.speedMod = speedMod;
-		this.nonlethalDamage = nonlethalDamage;
-		this.armorBonus = armorBonus;
-		this.shieldBonus = shieldBonus;
-		this.sizeArmorMod = sizeArmorMod;
-		this.naturalArmor = naturalArmor;
-		this.deflectArmorMod = deflectArmorMod;
-		this.miscArmorMod = miscArmorMod;
-		this.initiativeMod = initiativeMod;
-		this.miscInitiativeMod = miscInitiativeMod;
-		this.baseSaveF = baseSaveF;
-		this.baseSaveR = baseSaveR;
-		this.baseSaveW = baseSaveW;
-		this.magicModF = magicModF;
-		this.miscModF = miscModF;
-		this.tempModF = tempModF;
-		this.magicModR = magicModR;
-		this.miscModR = miscModR;
-		this.tempModR = tempModR;
-		this.magicModW = magicModW;
-		this.miscModW = miscModW;
-		this.tempModW = tempModW;
-		this.baseAttackBonus = baseAttackBonus;
-		this.experience = experience;
-		this.expToNextLvl = expToNextLvl;
-		CP = cP;
-		SP = sP;
-		GP = gP;
-		PP = pP;
-		this.name = name;
-		this.homeland = homeland;
-		this.size = size;
-		this.height = height;
-		this.hair = hair;
-		this.eyes = eyes;
-		this.spellResistance = spellResistance;
-		this.charClass = charClass;
-		this.alignment = alignment;
-		this.deity = deity;
-		this.race = race;
-		this.gender = gender;
-		this.weapons = weapons;
-		this.armor = armor;
-		this.items = items;
-		this.spells = spells;
-		this.abilities = abilities;
-		this.skills = skills;
-	}
 
 	public int getLevel()
 	{
@@ -911,7 +813,4 @@ public class CharacterSheet
 }
 /*
  * +getTouchAC() : int +getFlatFootedAC() : int +getCMB() : int +getCMD() : int
- * Getters(For everything)
- * 
- * Setters(For everything)
  */
