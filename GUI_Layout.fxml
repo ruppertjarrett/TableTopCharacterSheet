@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
@@ -87,7 +89,7 @@
                                     <TextField id="characterName" layoutX="214.0" layoutY="15.0" prefHeight="31.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     <TextField id="level" layoutX="214.0" layoutY="219.0" prefHeight="31.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                                     <ComboBox id="deity" prefHeight="25.0" prefWidth="211.0" promptText="Select Your Deity:" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                    <ComboBox id="class" layoutX="214.0" layoutY="222.0" prefHeight="25.0" prefWidth="211.0" promptText="Select Your Class:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <ComboBox id="charClass" layoutX="214.0" layoutY="222.0" prefHeight="25.0" prefWidth="211.0" promptText="Select Your Class:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                                     <ComboBox id="alignment" layoutX="214.0" layoutY="222.0" prefHeight="25.0" prefWidth="211.0" promptText="Select Your Alignment:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                     <ComboBox id="race" layoutX="214.0" layoutY="222.0" prefHeight="25.0" prefWidth="211.0" promptText="Select Your Race:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                     <GridPane GridPane.rowIndex="7">
@@ -385,15 +387,1180 @@
             </Tab>
             <Tab text="Skills">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="800.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="-2.0" layoutY="-8.0" prefHeight="574.0" prefWidth="814.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <GridPane prefHeight="1600.0" prefWidth="800.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="NEVER" maxWidth="82.2212142944336" minWidth="10.0" prefWidth="18.116668701171875" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="225.3606719970703" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.61619567871094" minWidth="0.0" prefWidth="48.63932800292969" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.6116943359375" minWidth="10.0" prefWidth="88.83294677734375" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="40.0" prefWidth="270.0" text="Skill Name" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="47.0" prefWidth="139.0" text="Bonus" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="60.0" prefWidth="97.0" text="Ability Mod." GridPane.columnIndex="4">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="46.0" prefWidth="100.0" text="Ranks" GridPane.columnIndex="6">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="45.0" prefWidth="136.0" text="Misc. Mod" GridPane.columnIndex="8">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="71.0" prefWidth="130.0" text="+" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="44.0" prefWidth="276.0" text="Label" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="94.0" text="+" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="47.0" prefWidth="100.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                       <graphic>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="57.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label prefHeight="50.0" prefWidth="92.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                       <graphic>
+                                          <Label alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="57.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="49.0" prefWidth="94.0" text="+" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="11">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="12">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="15">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="14">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="13">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="16">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="17">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="18">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="19">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="20">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="21">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="24">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="22">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="25">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="23">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="29">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="27">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="28">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="26">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="30">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="39">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="31">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="32">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="33">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="34">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="35">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="36">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="37">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="5" GridPane.rowIndex="38">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="38">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="37">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="25">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="26">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="27">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="28">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="29">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="30">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="39">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="31">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="32">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="33">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="34">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="35">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="36">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="24">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="23">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="22">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="21">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="20">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="19">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="18">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="17">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="16">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="15">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="14">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="13">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="8">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="10">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="11">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="7" GridPane.rowIndex="12">
+                                       <graphic>
+                                          <Label alignment="CENTER" prefHeight="49.0" prefWidth="94.0" text="+">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="1" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="2" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="3" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="4" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="5" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="6" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="7" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="8" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="9" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="10" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="11" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="12" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="13" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="14" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="15" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="16" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="17" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="18" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="19" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="20" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="21" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="22" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="23" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="24" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="25" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="26" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="27" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="28" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="29" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="30" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="39" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="31" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="32" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="33" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="34" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="35" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="36" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="37" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="38" />
+                                    <Label prefHeight="40.0" prefWidth="171.0" text="Acrobatics" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="41.0" prefWidth="184.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Appraise">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Bluff">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Climb">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Craft">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Craft">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Craft">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Diplomacy">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Disable Device">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Disguise">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Escape Artist">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="12">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Fly">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="13">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Handle Animal">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="14">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Heal">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="15">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Intimidate">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="16">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Knowledge(Arcana)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="17">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="224.0" text="Knowledge(Dungeoneering)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="18">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="201.0" text="Knowledge(Engineering)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="19">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="196.0" text="Knowledge(Geography)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="20">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Knowledge(History)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="21">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Knowledge(Local)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="22">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Knowledge(Nature)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="23">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Knowledge(Nobility)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="24">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Knowledge(Planes)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="25">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Knowledge(Religion)">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="26">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Linguistics">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="27">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Perception">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="28">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Perform">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="29">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Perform">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="30">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Perform">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="39">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Use Magic Device">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="31">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Profession">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="32">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Ride">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="33">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Sense Motive">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="34">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Sleight Of Hand">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="35">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Spellcraft">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="36">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Stealth">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="37">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Survival">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                    <Label GridPane.columnIndex="1" GridPane.rowIndex="38">
+                                       <graphic>
+                                          <Label prefHeight="40.0" prefWidth="171.0" text="Swim">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Spells">
+            <Tab text="Feats&amp;Abilities">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="Feats&amp;Abilities">
+            <Tab text="Spells">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
