@@ -246,122 +246,122 @@
                                           <Font size="24.0" />
                                        </font>
                                     </Label>
-                                    <TextField id="strBase" prefHeight="40.0" prefWidth="112.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <TextField id="strBase" alignment="CENTER" prefHeight="40.0" prefWidth="112.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="dexBase" prefHeight="40.0" prefWidth="112.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <TextField id="dexBase" alignment="CENTER" prefHeight="40.0" prefWidth="112.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="conBase" prefHeight="40.0" prefWidth="112.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <TextField id="conBase" alignment="CENTER" prefHeight="40.0" prefWidth="112.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="intBase" prefHeight="40.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <TextField id="intBase" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="dexMod" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <TextField id="dexMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="strMod" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <TextField id="strMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="wisBase" prefHeight="40.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <TextField id="wisBase" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="chaBase" prefHeight="40.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <TextField id="chaBase" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="strTemp" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                    <TextField id="strTemp" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="strTempMod" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                    <TextField id="strTempMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="dexTempMod" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                    <TextField id="dexTempMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="dexTemp" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                    <TextField id="dexTemp" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="conMod" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                    <TextField id="conMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="conTemp" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                    <TextField id="conTemp" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="conTempMod" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                    <TextField id="conTempMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="intMod" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                    <TextField id="intMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="intTemp" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                    <TextField id="intTemp" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="intTempMod" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                    <TextField id="intTempMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="wisMod" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                    <TextField id="wisMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="wisTemp" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                    <TextField id="wisTemp" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="wisTempMod" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                    <TextField id="wisTempMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="chaMod" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                    <TextField id="chaMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="chaTemp" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                    <TextField id="chaTemp" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
                                     </TextField>
-                                    <TextField id="chaTempMod" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                    <TextField id="chaTempMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
                                        <GridPane.margin>
                                           <Insets left="25.0" right="25.0" />
                                        </GridPane.margin>
@@ -392,8 +392,8 @@
                            <content>
                               <GridPane prefHeight="1600.0" prefWidth="800.0">
                                 <columnConstraints>
-                                  <ColumnConstraints hgrow="NEVER" maxWidth="82.2212142944336" minWidth="10.0" prefWidth="18.116668701171875" />
-                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="225.3606719970703" />
+                                  <ColumnConstraints hgrow="NEVER" maxWidth="82.2212142944336" minWidth="10.0" prefWidth="25.28570556640625" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="221.71429443359375" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.61619567871094" minWidth="0.0" prefWidth="48.63932800292969" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.6116943359375" minWidth="10.0" prefWidth="39.5714111328125" />
                                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.4285888671875" minWidth="10.0" prefWidth="153.4285888671875" />
@@ -1160,45 +1160,162 @@
                                           </Label>
                                        </graphic>
                                     </Label>
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="1" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="2" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="3" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="4" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="5" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="6" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="7" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="8" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="9" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="10" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="11" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="12" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="13" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="14" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="15" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="16" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="17" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="18" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="19" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="20" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="21" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="22" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="23" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="24" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="25" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="26" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="27" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="28" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="29" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="30" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="39" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="31" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="32" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="33" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="34" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="35" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="36" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="37" />
-                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="38" />
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="5">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="7">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="8">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="9">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="10">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="11">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="12">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="13">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="14">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="15">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="16">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="17">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="18">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="19">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="20">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="21">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="22">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="23">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="24">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="25">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="26">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="27">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="28">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="29">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="30">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="39">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="31">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="32">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="33">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="34">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="35">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="36">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="37">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
+                                    <CheckBox mnemonicParsing="false" GridPane.rowIndex="38">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin></CheckBox>
                                     <Label prefHeight="40.0" prefWidth="171.0" text="Acrobatics" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <font>
                                           <Font size="18.0" />
@@ -1734,22 +1851,28 @@
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <TextField id="useMagicDeviceBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="39" />
-                                    <TextField id="useMagicDeviceRanks" GridPane.columnIndex="6" GridPane.rowIndex="39" />
-                                    <TextField id="useMagicDeviceMisc" GridPane.columnIndex="8" GridPane.rowIndex="39" />
-                                    <TextField id="swimBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="38" />
-                                    <TextField id="survivalBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="37" />
-                                    <TextField id="stealthBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="36" />
-                                    <TextField id="spellcraftBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="35" />
-                                    <TextField id="sleightOfHandBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="34" />
-                                    <TextField id="profession2Bonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="31" />
-                                    <TextField id="rideBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="32" />
-                                    <TextField id="senseMotive" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="33" />
-                                    <TextField id="profession1Bonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="30" />
-                                    <TextField id="perform2Bonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="29" />
-                                    <TextField id="perform1Bonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="28" />
-                                    <TextField id="perceptionBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="27" />
-                                    <TextField id="linguisticsBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="26" />
+                                    <TextField id="useMagicDeviceBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="39" />
+                                    <TextField id="useMagicDeviceRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="39" />
+                                    <TextField id="useMagicDeviceMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="39">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="swimBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="38" />
+                                    <TextField id="survivalBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="37" />
+                                    <TextField id="stealthBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="36" />
+                                    <TextField id="spellcraftBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="35" />
+                                    <TextField id="sleightOfHandBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="34" />
+                                    <TextField id="profession2Bonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="31" />
+                                    <TextField id="rideBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="32" />
+                                    <TextField id="senseMotive" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="33" />
+                                    <TextField id="profession1Bonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="30" />
+                                    <TextField id="perform2Bonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="29" />
+                                    <TextField id="perform1Bonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="28" />
+                                    <TextField id="perceptionBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="27" />
+                                    <TextField id="linguisticsBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="26" />
                                     <GridPane GridPane.columnIndex="1" GridPane.rowIndex="28">
                                       <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.42855834960938" minWidth="10.0" prefWidth="68.5714111328125" />
@@ -1837,107 +1960,221 @@
                                           </TextField>
                                        </children>
                                     </GridPane>
-                                    <TextField id="knowledgeRBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="25" />
-                                    <TextField id="KnowlegdePBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="24" />
-                                    <TextField id="knowledgeNoBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="23" />
-                                    <TextField id="knowledgeNaBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="22" />
-                                    <TextField id="knowledgeLBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="21" />
-                                    <TextField id="knowledgeHBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="20" />
-                                    <TextField id="knowledgeGBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="19" />
-                                    <TextField id="knowledgeEBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="18" />
-                                    <TextField id="knowledgeDBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="17" />
-                                    <TextField id="knowledgeABonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="16" />
-                                    <TextField id="intimidateBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="15" />
-                                    <TextField id="healBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="14" />
-                                    <TextField id="handleAnimalBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="13" />
-                                    <TextField id="flyBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="12" />
-                                    <TextField id="acrobaticsBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <TextField id="appraiseBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <TextField id="bluffBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <TextField id="climbBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                    <TextField id="craft1Bonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                                    <TextField id="craft2Bonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                                    <TextField id="craft3Bonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                                    <TextField id="diplomacyBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-                                    <TextField id="disableDeviceBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                                    <TextField id="disguiseBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-                                    <TextField id="escapeArtistBonus" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="11" />
-                                    <TextField id="acrobaticsRanks" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                                    <TextField id="acrobaticsMisc" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-                                    <TextField id="appraiseRanks" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                                    <TextField id="bluffRanks" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                    <TextField id="appraiseMisc" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-                                    <TextField id="bluffMisc" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-                                    <TextField id="climbRanks" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-                                    <TextField id="climbMisc" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-                                    <TextField id="craft1Ranks" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                                    <TextField id="craft1Misc" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-                                    <TextField id="craft2Ranks" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                                    <TextField id="craft3Ranks" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                                    <TextField id="diplomacyRanks" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-                                    <TextField id="disableDeviceRanks" GridPane.columnIndex="6" GridPane.rowIndex="9" />
-                                    <TextField id="disguiseRanks" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-                                    <TextField id="escapeArtistRanks" GridPane.columnIndex="6" GridPane.rowIndex="11" />
-                                    <TextField id="flyRanks" GridPane.columnIndex="6" GridPane.rowIndex="12" />
-                                    <TextField id="handleAnimalRanks" GridPane.columnIndex="6" GridPane.rowIndex="13" />
-                                    <TextField id="craft2Misc" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-                                    <TextField id="craft3Misc" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-                                    <TextField id="diplomacyMisc" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-                                    <TextField id="disableDeviceMisc" GridPane.columnIndex="8" GridPane.rowIndex="9" />
-                                    <TextField id="disguiseMisc" GridPane.columnIndex="8" GridPane.rowIndex="10" />
-                                    <TextField id="escapeArtistMisc" GridPane.columnIndex="8" GridPane.rowIndex="11" />
-                                    <TextField id="flyMisc" GridPane.columnIndex="8" GridPane.rowIndex="12" />
-                                    <TextField id="handleAnimalMisc" GridPane.columnIndex="8" GridPane.rowIndex="13" />
-                                    <TextField id="healRanks" GridPane.columnIndex="6" GridPane.rowIndex="14" />
-                                    <TextField id="healMisc" GridPane.columnIndex="8" GridPane.rowIndex="14" />
-                                    <TextField id="intimidateRanks" GridPane.columnIndex="6" GridPane.rowIndex="15" />
-                                    <TextField id="knowledgeARanks" GridPane.columnIndex="6" GridPane.rowIndex="16" />
-                                    <TextField id="knowledgeDRanks" GridPane.columnIndex="6" GridPane.rowIndex="17" />
-                                    <TextField id="knowledgeERanks" GridPane.columnIndex="6" GridPane.rowIndex="18" />
-                                    <TextField id="knowledgeGRanks" GridPane.columnIndex="6" GridPane.rowIndex="19" />
-                                    <TextField id="KnowledgeHRanks" GridPane.columnIndex="6" GridPane.rowIndex="20" />
-                                    <TextField id="knowledgeLRanks" GridPane.columnIndex="6" GridPane.rowIndex="21" />
-                                    <TextField id="knowledgeNaRanks" GridPane.columnIndex="6" GridPane.rowIndex="22" />
-                                    <TextField id="knowledgeNoRanks" GridPane.columnIndex="6" GridPane.rowIndex="23" />
-                                    <TextField id="knowledgePRanks" GridPane.columnIndex="6" GridPane.rowIndex="24" />
-                                    <TextField id="knowledgeRRanks" GridPane.columnIndex="6" GridPane.rowIndex="25" />
-                                    <TextField id="linguisticsRanks" GridPane.columnIndex="6" GridPane.rowIndex="26" />
-                                    <TextField id="perceptionRanks" GridPane.columnIndex="6" GridPane.rowIndex="27" />
-                                    <TextField id="intimidateMisc" GridPane.columnIndex="8" GridPane.rowIndex="15" />
-                                    <TextField id="knowledgeAMisc" GridPane.columnIndex="8" GridPane.rowIndex="16" />
-                                    <TextField id="knowledgeDMisc" GridPane.columnIndex="8" GridPane.rowIndex="17" />
-                                    <TextField id="knowledgeEMisc" GridPane.columnIndex="8" GridPane.rowIndex="18" />
-                                    <TextField id="knowledgeGMisc" GridPane.columnIndex="8" GridPane.rowIndex="19" />
-                                    <TextField id="knowledgeHMisc" GridPane.columnIndex="8" GridPane.rowIndex="20" />
-                                    <TextField id="knowledgeLMisc" GridPane.columnIndex="8" GridPane.rowIndex="21" />
-                                    <TextField id="knowledgeNaMisc" GridPane.columnIndex="8" GridPane.rowIndex="22" />
-                                    <TextField id="knowledgeNoMisc" GridPane.columnIndex="8" GridPane.rowIndex="23" />
-                                    <TextField id="knowledgePMisc" GridPane.columnIndex="8" GridPane.rowIndex="24" />
-                                    <TextField GridPane.columnIndex="8" GridPane.rowIndex="25" />
-                                    <TextField id="linguisticsMisc" GridPane.columnIndex="8" GridPane.rowIndex="26" />
-                                    <TextField id="perceptionMisc" GridPane.columnIndex="8" GridPane.rowIndex="27" />
-                                    <TextField id="perform1Ranks" GridPane.columnIndex="6" GridPane.rowIndex="28" />
-                                    <TextField id="perform2Ranks" GridPane.columnIndex="6" GridPane.rowIndex="29" />
-                                    <TextField id="profession1Ranks" GridPane.columnIndex="6" GridPane.rowIndex="30" />
-                                    <TextField id="profession2Ranks" GridPane.columnIndex="6" GridPane.rowIndex="31" />
-                                    <TextField id="rideRanks" GridPane.columnIndex="6" GridPane.rowIndex="32" />
-                                    <TextField id="senseMotiveRanks" GridPane.columnIndex="6" GridPane.rowIndex="33" />
-                                    <TextField id="sleightOfHandRanks" GridPane.columnIndex="6" GridPane.rowIndex="34" />
-                                    <TextField id="spellcraftRanks" GridPane.columnIndex="6" GridPane.rowIndex="35" />
-                                    <TextField id="survivalRanks" GridPane.columnIndex="6" GridPane.rowIndex="37" />
-                                    <TextField id="stealthRanks" GridPane.columnIndex="6" GridPane.rowIndex="36" />
-                                    <TextField id="swimRanks" GridPane.columnIndex="6" GridPane.rowIndex="38" />
-                                    <TextField id="swimMisc" GridPane.columnIndex="8" GridPane.rowIndex="38" />
-                                    <TextField id="survivalMisc" GridPane.columnIndex="8" GridPane.rowIndex="37" />
-                                    <TextField id="stealthMisc" GridPane.columnIndex="8" GridPane.rowIndex="36" />
-                                    <TextField id="spellcraftMisc" GridPane.columnIndex="8" GridPane.rowIndex="35" />
-                                    <TextField id="sleightOfHandMisc" GridPane.columnIndex="8" GridPane.rowIndex="34" />
-                                    <TextField id="senseMotiveMisc" GridPane.columnIndex="8" GridPane.rowIndex="33" />
-                                    <TextField id="rideMisc" GridPane.columnIndex="8" GridPane.rowIndex="32" />
-                                    <TextField id="profession2Misc" GridPane.columnIndex="8" GridPane.rowIndex="31" />
-                                    <TextField id="profession1Misc" GridPane.columnIndex="8" GridPane.rowIndex="30" />
-                                    <TextField id="perform2Misc" GridPane.columnIndex="8" GridPane.rowIndex="29" />
-                                    <TextField id="perform1Misc" GridPane.columnIndex="8" GridPane.rowIndex="28" />
+                                    <TextField id="knowledgeRBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="25" />
+                                    <TextField id="KnowlegdePBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="24" />
+                                    <TextField id="knowledgeNoBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="23" />
+                                    <TextField id="knowledgeNaBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="22" />
+                                    <TextField id="knowledgeLBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="21" />
+                                    <TextField id="knowledgeHBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="20" />
+                                    <TextField id="knowledgeGBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+                                    <TextField id="knowledgeEBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+                                    <TextField id="knowledgeDBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+                                    <TextField id="knowledgeABonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                                    <TextField id="intimidateBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                                    <TextField id="healBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                    <TextField id="handleAnimalBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                    <TextField id="flyBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                    <TextField id="acrobaticsBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField id="appraiseBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField id="bluffBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField id="climbBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField id="craft1Bonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField id="craft2Bonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField id="craft3Bonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <TextField id="diplomacyBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <TextField id="disableDeviceBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <TextField id="disguiseBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                    <TextField id="escapeArtistBonus" alignment="CENTER" editable="false" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                    <TextField id="acrobaticsRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                    <TextField id="acrobaticsMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="appraiseRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                    <TextField id="bluffRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                    <TextField id="appraiseMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="bluffMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="climbRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                    <TextField id="climbMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="craft1Ranks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                    <TextField id="craft1Misc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="craft2Ranks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                                    <TextField id="craft3Ranks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                    <TextField id="diplomacyRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                                    <TextField id="disableDeviceRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                                    <TextField id="disguiseRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="10" />
+                                    <TextField id="escapeArtistRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="11" />
+                                    <TextField id="flyRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="12" />
+                                    <TextField id="handleAnimalRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="13" />
+                                    <TextField id="craft2Misc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="craft3Misc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="7">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="diplomacyMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="disableDeviceMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="9">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="disguiseMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="10">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="escapeArtistMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="11">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="flyMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="12">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="handleAnimalMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="13">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="healRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="14" />
+                                    <TextField id="healMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="14">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="intimidateRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="15" />
+                                    <TextField id="knowledgeARanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="16" />
+                                    <TextField id="knowledgeDRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="17" />
+                                    <TextField id="knowledgeERanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="18" />
+                                    <TextField id="knowledgeGRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="19" />
+                                    <TextField id="KnowledgeHRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="20" />
+                                    <TextField id="knowledgeLRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="21" />
+                                    <TextField id="knowledgeNaRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="22" />
+                                    <TextField id="knowledgeNoRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="23" />
+                                    <TextField id="knowledgePRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="24" />
+                                    <TextField id="knowledgeRRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="25" />
+                                    <TextField id="linguisticsRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="26" />
+                                    <TextField id="perceptionRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="27" />
+                                    <TextField id="intimidateMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="15">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeAMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="16">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeDMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="17">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeEMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="18">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeGMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="19">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeHMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="20">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeLMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="21">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeNaMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="22">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgeNoMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="23">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="knowledgePMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="24">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="25">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="linguisticsMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="26">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="perceptionMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="27">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="perform1Ranks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="28" />
+                                    <TextField id="perform2Ranks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="29" />
+                                    <TextField id="profession1Ranks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="30" />
+                                    <TextField id="profession2Ranks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="31" />
+                                    <TextField id="rideRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="32" />
+                                    <TextField id="senseMotiveRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="33" />
+                                    <TextField id="sleightOfHandRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="34" />
+                                    <TextField id="spellcraftRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="35" />
+                                    <TextField id="survivalRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="37" />
+                                    <TextField id="stealthRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="36" />
+                                    <TextField id="swimRanks" alignment="CENTER" GridPane.columnIndex="6" GridPane.rowIndex="38" />
+                                    <TextField id="swimMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="38">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="survivalMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="37">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="stealthMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="36">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="spellcraftMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="35">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="sleightOfHandMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="34">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="senseMotiveMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="33">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="rideMisc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="32">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="profession2Misc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="31">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="profession1Misc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="30">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="perform2Misc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="29">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
+                                    <TextField id="perform1Misc" alignment="CENTER" GridPane.columnIndex="8" GridPane.rowIndex="28">
+                                       <GridPane.margin>
+                                          <Insets right="15.0" />
+                                       </GridPane.margin></TextField>
                                     <Label alignment="CENTER" prefHeight="39.0" prefWidth="159.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                        <font>
                                           <Font size="24.0" />
