@@ -18,7 +18,10 @@ public class CharacterSheet
 			nonlethalDamage, armorBonus, shieldBonus, sizeArmorMod, naturalArmor, deflectArmorMod, miscArmorMod,
 			initiativeMod, miscInitiativeMod, baseSaveF, baseSaveR, baseSaveW, magicModF, miscModF, tempModF, magicModR,
 			miscModR, tempModR, magicModW, miscModW, tempModW, baseAttackBonus, experience, expToNextLvl, CP, SP, GP,
-			PP;
+			PP, spellsKnown0, dc0, spd0, spellsKnown1, dc1, spd1, bonusSpells1, spellsKnown2, dc2, spd2, bonusSpells2,
+			spellsKnown3, dc3, spd3, bonusSpells3, spellsKnown4, dc4, spd4, bonusSpells4, spellsKnown5, dc5, spd5, bonusSpells5,
+			spellsKnown6, dc6, spd6, bonusSpells6, spellsKnown7, dc7, spd7, bonusSpells7, spellsKnown8, dc8, spd8, bonusSpells8,
+			spellsKnown9, dc9, spd9, bonusSpells9;
 	private String name, homeland, size, height, hair, eyes, spellResistance;
 	private Class charClass;
 	private Alignment alignment;
@@ -817,6 +820,318 @@ public class CharacterSheet
 	public void setPP(int pP)
 	{
 		PP = pP;
+	}
+	
+	public int getSpellsKnown0() {
+		return spellsKnown0;
+	}
+
+	public void setSpellsKnown0(int spellsKnown0) {
+		this.spellsKnown0 = spellsKnown0;
+	}
+
+	public int getDc0() {
+		return dc0;
+	}
+
+	public void setDc0(int dc0) {
+		this.dc0 = dc0;
+	}
+
+	public int getSpd0() {
+		return spd0;
+	}
+
+	public void setSpd0(int spd0) {
+		this.spd0 = spd0;
+	}
+
+	public int getSpellsKnown1() {
+		return spellsKnown1;
+	}
+
+	public void setSpellsKnown1(int spellsKnown1) {
+		this.spellsKnown1 = spellsKnown1;
+	}
+
+	public int getDc1() {
+		return dc1;
+	}
+
+	public void setDc1(int dc1) {
+		this.dc1 = dc1;
+	}
+
+	public int getSpd1() {
+		return spd1;
+	}
+
+	public void setSpd1(int spd1) {
+		this.spd1 = spd1;
+	}
+
+	public int getBonusSpells1() {
+		return bonusSpells1;
+	}
+
+	public void setBonusSpells1(int bonusSpells1) {
+		this.bonusSpells1 = bonusSpells1;
+	}
+
+	public int getSpellsKnown2() {
+		return spellsKnown2;
+	}
+
+	public void setSpellsKnown2(int spellsKnown2) {
+		this.spellsKnown2 = spellsKnown2;
+	}
+
+	public int getDc2() {
+		return dc2;
+	}
+
+	public void setDc2(int dc2) {
+		this.dc2 = dc2;
+	}
+
+	public int getSpd2() {
+		return spd2;
+	}
+
+	public void setSpd2(int spd2) {
+		this.spd2 = spd2;
+	}
+
+	public int getBonusSpells2() {
+		return bonusSpells2;
+	}
+
+	public void setBonusSpells2(int bonusSpells2) {
+		this.bonusSpells2 = bonusSpells2;
+	}
+
+	public int getSpellsKnown3() {
+		return spellsKnown3;
+	}
+
+	public void setSpellsKnown3(int spellsKnown3) {
+		this.spellsKnown3 = spellsKnown3;
+	}
+
+	public int getDc3() {
+		return dc3;
+	}
+
+	public void setDc3(int dc3) {
+		this.dc3 = dc3;
+	}
+
+	public int getSpd3() {
+		return spd3;
+	}
+
+	public void setSpd3(int spd3) {
+		this.spd3 = spd3;
+	}
+
+	public int getBonusSpells3() {
+		return bonusSpells3;
+	}
+
+	public void setBonusSpells3(int bonusSpells3) {
+		this.bonusSpells3 = bonusSpells3;
+	}
+
+	public int getSpellsKnown4() {
+		return spellsKnown4;
+	}
+
+	public void setSpellsKnown4(int spellsKnown4) {
+		this.spellsKnown4 = spellsKnown4;
+	}
+
+	public int getDc4() {
+		return dc4;
+	}
+
+	public void setDc4(int dc4) {
+		this.dc4 = dc4;
+	}
+
+	public int getSpd4() {
+		return spd4;
+	}
+
+	public void setSpd4(int spd4) {
+		this.spd4 = spd4;
+	}
+
+	public int getBonusSpells4() {
+		return bonusSpells4;
+	}
+
+	public void setBonusSpells4(int bonusSpells4) {
+		this.bonusSpells4 = bonusSpells4;
+	}
+
+	public int getSpellsKnown5() {
+		return spellsKnown5;
+	}
+
+	public void setSpellsKnown5(int spellsKnown5) {
+		this.spellsKnown5 = spellsKnown5;
+	}
+
+	public int getDc5() {
+		return dc5;
+	}
+
+	public void setDc5(int dc5) {
+		this.dc5 = dc5;
+	}
+
+	public int getSpd5() {
+		return spd5;
+	}
+
+	public void setSpd5(int spd5) {
+		this.spd5 = spd5;
+	}
+
+	public int getBonusSpells5() {
+		return bonusSpells5;
+	}
+
+	public void setBonusSpells5(int bonusSpells5) {
+		this.bonusSpells5 = bonusSpells5;
+	}
+
+	public int getSpellsKnown6() {
+		return spellsKnown6;
+	}
+
+	public void setSpellsKnown6(int spellsKnown6) {
+		this.spellsKnown6 = spellsKnown6;
+	}
+
+	public int getDc6() {
+		return dc6;
+	}
+
+	public void setDc6(int dc6) {
+		this.dc6 = dc6;
+	}
+
+	public int getSpd6() {
+		return spd6;
+	}
+
+	public void setSpd6(int spd6) {
+		this.spd6 = spd6;
+	}
+
+	public int getBonusSpells6() {
+		return bonusSpells6;
+	}
+
+	public void setBonusSpells6(int bonusSpells6) {
+		this.bonusSpells6 = bonusSpells6;
+	}
+
+	public int getSpellsKnown7() {
+		return spellsKnown7;
+	}
+
+	public void setSpellsKnown7(int spellsKnown7) {
+		this.spellsKnown7 = spellsKnown7;
+	}
+
+	public int getDc7() {
+		return dc7;
+	}
+
+	public void setDc7(int dc7) {
+		this.dc7 = dc7;
+	}
+
+	public int getSpd7() {
+		return spd7;
+	}
+
+	public void setSpd7(int spd7) {
+		this.spd7 = spd7;
+	}
+
+	public int getBonusSpells7() {
+		return bonusSpells7;
+	}
+
+	public void setBonusSpells7(int bonusSpells7) {
+		this.bonusSpells7 = bonusSpells7;
+	}
+
+	public int getSpellsKnown8() {
+		return spellsKnown8;
+	}
+
+	public void setSpellsKnown8(int spellsKnown8) {
+		this.spellsKnown8 = spellsKnown8;
+	}
+
+	public int getDc8() {
+		return dc8;
+	}
+
+	public void setDc8(int dc8) {
+		this.dc8 = dc8;
+	}
+
+	public int getSpd8() {
+		return spd8;
+	}
+
+	public void setSpd8(int spd8) {
+		this.spd8 = spd8;
+	}
+
+	public int getBonusSpells8() {
+		return bonusSpells8;
+	}
+
+	public void setBonusSpells8(int bonusSpells8) {
+		this.bonusSpells8 = bonusSpells8;
+	}
+
+	public int getSpellsKnown9() {
+		return spellsKnown9;
+	}
+
+	public void setSpellsKnown9(int spellsKnown9) {
+		this.spellsKnown9 = spellsKnown9;
+	}
+
+	public int getDc9() {
+		return dc9;
+	}
+
+	public void setDc9(int dc9) {
+		this.dc9 = dc9;
+	}
+
+	public int getSpd9() {
+		return spd9;
+	}
+
+	public void setSpd9(int spd9) {
+		this.spd9 = spd9;
+	}
+
+	public int getBonusSpells9() {
+		return bonusSpells9;
+	}
+
+	public void setBonusSpells9(int bonusSpells9) {
+		this.bonusSpells9 = bonusSpells9;
 	}
 
 	public void setName(String name)
