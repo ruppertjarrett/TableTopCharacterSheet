@@ -81,4 +81,43 @@ public class Weapon {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Name : ");
+		sb.append(getName());
+		sb.append(" | ");
+		
+		sb.append("Value : ");
+		sb.append(getValue());
+		sb.append(" | ");
+		
+		sb.append("Range : ");
+		sb.append(getRange());
+		sb.append(" | ");
+		
+		sb.append("Damage : ");
+		sb.append(getDamage());
+		sb.append(" | ");
+		
+		sb.append("AttackBonus : ");
+		sb.append(getAttackBonus());
+		sb.append(" | ");
+		
+		sb.append("Critical : ");
+		sb.append(getCritical());
+		sb.append(" | ");
+		
+		sb.append("Type : ");
+		sb.append(getType());
+		sb.append(" | ");
+		
+		sb.append("Notes : ");
+		sb.append(getNotes());
+		sb.append(" | ");
+		
+		return sb.toString();
+	}
 }
