@@ -15,7 +15,14 @@ public class Spell {
 	}
 	
 	public Spell(String name, int level, String school, String subschool, int prepared, int cast, String notes, String description){
-		
+		setName(name);
+		setLevel(level);
+		setSchool(school);
+		setSubschool(subschool);
+		setPrepared(prepared);
+		setCast(cast);
+		setNotes(notes);
+		setDescription(description);
 	}
 
 	public String getName() {
@@ -80,5 +87,46 @@ public class Spell {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Name # ");
+		sb.append(getName());
+		sb.append(" | ");
+		
+		sb.append("Level # ");
+		sb.append(getLevel());
+		sb.append(" | ");
+		
+		sb.append("School # ");
+		sb.append(getSchool());
+		sb.append(" | ");
+		
+		sb.append("Subschool # ");
+		sb.append(getSubschool());
+		sb.append(" | ");
+		
+		sb.append("Prepared # ");
+		sb.append(getPrepared());
+		sb.append(" | ");
+		
+		sb.append("Cast # ");
+		sb.append(getCast());
+		sb.append(" | ");
+		
+		sb.append("Notes # ");
+		sb.append(getNotes());
+		sb.append(" | ");
+		
+		sb.append("Description # ");
+		sb.append(getDescription());
+		sb.append(" | ");
+		
+		sb.append("\r	");
+		
+		return sb.toString();
 	}
 }

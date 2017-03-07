@@ -12,7 +12,11 @@ public class Item {
 	}
 	
 	public Item(String name, int value, String location, String type, String description){
-		
+		setName(name);
+		setValue(value);
+		setLocation(location);
+		setType(type);
+		setDescription(description);
 	}
 
 	public String getName() {
@@ -55,4 +59,31 @@ public class Item {
 		this.description = description;
 	}
 
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Name # ");
+		sb.append(getName());
+		sb.append(" | ");
+		
+		sb.append("Value # ");
+		sb.append(getValue());
+		sb.append(" | ");
+		
+		sb.append("Location # ");
+		sb.append(getLocation());
+		sb.append(" | ");
+		
+		sb.append("Type # ");
+		sb.append(getType());
+		sb.append(" | ");
+		
+		sb.append("Description # ");
+		sb.append(getDescription());
+		sb.append(" | ");
+		
+		sb.append("\r	");
+		
+		return sb.toString();
+	}
 }

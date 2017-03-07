@@ -6,332 +6,19 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
 
+import enums.AbilityType;
 import enums.Alignment;
 import enums.Class;
 import enums.Deity;
 import enums.Gender;
+import enums.NameOfSkill;
 import enums.Race;
+import enums.SkillTiedAbility;
 
 public class FileManager {
-
-	public static String formatInfoToString(CharacterSheet sheet) {
-		StringBuilder sb = new StringBuilder();
-		
-		sb.append("Level : ");
-		sb.append(sheet.getLevel());
-		sb.append(";\r");
-		
-		sb.append("Age : ");
-		sb.append(sheet.getAge());
-		sb.append(";\r");
-		
-		sb.append("Weight : ");
-		sb.append(sheet.getWeight());
-		sb.append(";\r");
-		
-		sb.append("StrBase : ");
-		sb.append(sheet.getStrBase());
-		sb.append(";\r");
-		
-		sb.append("StrMod : ");
-		sb.append(sheet.getStrMod());
-		sb.append(";\r");
-		
-		sb.append("StrTemp : ");
-		sb.append(sheet.getStrTemp());
-		sb.append(";\r");
-		
-		sb.append("StrTempMod : ");
-		sb.append(sheet.getStrTempMod());
-		sb.append(";\r");
-		
-		sb.append("DexBase : ");
-		sb.append(sheet.getDexBase());
-		sb.append(";\r");
-		
-		sb.append("DexMod : ");
-		sb.append(sheet.getDexMod());
-		sb.append(";\r");
-		
-		sb.append("DexTemp : ");
-		sb.append(sheet.getDexTemp());
-		sb.append(";\r");
-		
-		sb.append("DexTempMod : ");
-		sb.append(sheet.getDexTempMod());
-		sb.append(";\r");
-		
-		sb.append("ConBase : ");
-		sb.append(sheet.getConBase());
-		sb.append(";\r");
-		
-		sb.append("ConMod : ");
-		sb.append(sheet.getConMod());
-		sb.append(";\r");
-		
-		sb.append("ConTemp : ");
-		sb.append(sheet.getConTemp());
-		sb.append(";\r");
-		
-		sb.append("ConTempMod : ");
-		sb.append(sheet.getConTempMod());
-		sb.append(";\r");
-		
-		sb.append("IntBase : ");
-		sb.append(sheet.getIntBase());
-		sb.append(";\r");
-		
-		sb.append("IntMod : ");
-		sb.append(sheet.getIntMod());
-		sb.append(";\r");
-		
-		sb.append("IntTemp : ");
-		sb.append(sheet.getIntTemp());
-		sb.append(";\r");
-		
-		sb.append("IntTempMod : ");
-		sb.append(sheet.getIntTempMod());
-		sb.append(";\r");
-		
-		sb.append("WisBase : ");
-		sb.append(sheet.getWisBase());
-		sb.append(";\r");
-		
-		sb.append("WisMod : ");
-		sb.append(sheet.getWisMod());
-		sb.append(";\r");
-		
-		sb.append("WisTemp : ");
-		sb.append(sheet.getWisTemp());
-		sb.append(";\r");
-		
-		sb.append("WisTempMod : ");
-		sb.append(sheet.getWisTempMod());
-		sb.append(";\r");
-		
-		sb.append("BaseHP : ");
-		sb.append(sheet.getBaseHP());
-		sb.append(";\r");
-		
-		sb.append("CurHP : ");
-		sb.append(sheet.getCurHP());
-		sb.append(";\r");
-		
-		sb.append("BaseSpeed : ");
-		sb.append(sheet.getBaseSpeed());
-		sb.append(";\r");
-		
-		sb.append("SpeedWithArmor : ");
-		sb.append(sheet.getSpeedWithArmor());
-		sb.append(";\r");
-		
-		sb.append("FlySpeed : ");
-		sb.append(sheet.getFlySpeed());
-		sb.append(";\r");
-		
-		sb.append("SwimSpeed : ");
-		sb.append(sheet.getSwimSpeed());
-		sb.append(";\r");
-		
-		sb.append("ClimbSpeed : ");
-		sb.append(sheet.getClimbSpeed());
-		sb.append(";\r");
-		
-		sb.append("BurrowSpeed : ");
-		sb.append(sheet.getBurrowSpeed());
-		sb.append(";\r");
-		
-		sb.append("SpeedMod : ");
-		sb.append(sheet.getSpeedMod());
-		sb.append(";\r");
-		
-		sb.append("NonlethalDamage : ");
-		sb.append(sheet.getNonlethalDamage());
-		sb.append(";\r");
-		
-		sb.append("ArmorBonus : ");
-		sb.append(sheet.getArmorBonus());
-		sb.append(";\r");
-		
-		sb.append("ShieldBonus : ");
-		sb.append(sheet.getShieldBonus());
-		sb.append(";\r");
-		
-		sb.append("SizeArmorMod : ");
-		sb.append(sheet.getSizeArmorMod());
-		sb.append(";\r");
-		
-		sb.append("NaturalArmor : ");
-		sb.append(sheet.getNaturalArmor());
-		sb.append(";\r");
-		
-		sb.append("DeflectArmorMod : ");
-		sb.append(sheet.getDeflectArmorMod());
-		sb.append(";\r");
-		
-		sb.append("MiscArmorMod : ");
-		sb.append(sheet.getMiscArmorMod());
-		sb.append(";\r");
-		
-		sb.append("InitiativeMod : ");
-		sb.append(sheet.getInitiativeMod());
-		sb.append(";\r");
-		
-		sb.append("MiscInitiativeMod : ");
-		sb.append(sheet.getMiscInitiativeMod());
-		sb.append(";\r");
-		
-		sb.append("BaseSaveF : ");
-		sb.append(sheet.getBaseSaveF());
-		sb.append(";\r");
-		
-		sb.append("BaseSaveR : ");
-		sb.append(sheet.getBaseSaveR());
-		sb.append(";\r");
-		
-		sb.append("BaseSaveW : ");
-		sb.append(sheet.getBaseSaveW());
-		sb.append(";\r");
-		
-		sb.append("MagicModF : ");
-		sb.append(sheet.getMagicModF());
-		sb.append(";\r");
-		
-		sb.append("MagicModR : ");
-		sb.append(sheet.getMagicModR());
-		sb.append(";\r");
-		
-		sb.append("MagicModW : ");
-		sb.append(sheet.getMagicModW());
-		sb.append(";\r");
-		
-		sb.append("MiscModF : ");
-		sb.append(sheet.getMiscModF());
-		sb.append(";\r");
-		
-		sb.append("MiscModR : ");
-		sb.append(sheet.getMiscModR());
-		sb.append(";\r");
-		
-		sb.append("MiscModW : ");
-		sb.append(sheet.getMiscModW());
-		sb.append(";\r");
-		
-		sb.append("TempModF : ");
-		sb.append(sheet.getTempModF());
-		sb.append(";\r");
-		
-		sb.append("TempModR : ");
-		sb.append(sheet.getTempModR());
-		sb.append(";\r");
-		
-		sb.append("TempModW : ");
-		sb.append(sheet.getTempModW());
-		sb.append(";\r");
-		
-		sb.append("BaseAttackBonus : ");
-		sb.append(sheet.getBaseAttackBonus());
-		sb.append(";\r");
-		
-		sb.append("Experience : ");
-		sb.append(sheet.getExperience());
-		sb.append(";\r");
-		
-		sb.append("ExpToNextLvl : ");
-		sb.append(sheet.getExpToNextLvl());
-		sb.append(";\r");
-		
-		sb.append("CP : ");
-		sb.append(sheet.getCP());
-		sb.append(";\r");
-		
-		sb.append("SP : ");
-		sb.append(sheet.getSP());
-		sb.append(";\r");
-		
-		sb.append("GP : ");
-		sb.append(sheet.getGP());
-		sb.append(";\r");
-		
-		sb.append("PP : ");
-		sb.append(sheet.getPP());
-		sb.append(";\r");
-		
-		sb.append("Name : ");
-		sb.append(sheet.getName());
-		sb.append(";\r");
-		
-		sb.append("Homeland : ");
-		sb.append(sheet.getHomeland());
-		sb.append(";\r");
-		
-		sb.append("Size : ");
-		sb.append(sheet.getSize());
-		sb.append(";\r");
-		
-		sb.append("Height : ");
-		sb.append(sheet.getHeight());
-		sb.append(";\r");
-		
-		sb.append("Hair : ");
-		sb.append(sheet.getHair());
-		sb.append(";\r");
-		
-		sb.append("Eyes : ");
-		sb.append(sheet.getEyes());
-		sb.append(";\r");
-		
-		sb.append("SpellResistance : ");
-		sb.append(sheet.getSpellResistance());
-		sb.append(";\r");
-		
-		sb.append("CharClass : ");
-		sb.append(sheet.getCharClass());
-		sb.append(";\r");
-		
-		sb.append("Alignment : ");
-		sb.append(sheet.getAlignment());
-		sb.append(";\r");
-		
-		sb.append("Deity : ");
-		sb.append(sheet.getDeity());
-		sb.append(";\r");
-		
-		sb.append("Race : ");
-		sb.append(sheet.getRace());
-		sb.append(";\r");
-		
-		sb.append("Gender : ");
-		sb.append(sheet.getGender());
-		sb.append(";\r");
-		
-		sb.append("Weapons : ");
-		sb.append(sheet.getWeapons());
-		sb.append(";\r");
-		
-		sb.append("Armor : ");
-		sb.append(sheet.getArmor());
-		sb.append(";\r");
-		
-		sb.append("Items : ");
-		sb.append(sheet.getItems());
-		sb.append(";\r");
-		
-		sb.append("Spells : ");
-		sb.append(sheet.getSpells());
-		sb.append(";\r");
-		
-		sb.append("Abilities : ");
-		sb.append(sheet.getAbilities());
-		sb.append(";\r");
-		
-		sb.append("Skills : ");
-		sb.append(sheet.getSkills());
-		sb.append(";\r");
-		
-		return sb.toString();
-	}
 	
 	public static CharacterSheet formatInfoToCharacterSheet(String s) {
 		CharacterSheet sheet = new CharacterSheet();
@@ -845,13 +532,463 @@ public class FileManager {
 					}
 					break;
 				case "Weapons":
+					ArrayList<Weapon> weapons = new ArrayList<>();
+					
+					String st = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
+					
+					String[] w = st.split(",");
+					
+					for(int x = 0; x < w.length; x++) {
+						String[] we = w[x].split("\\|");
+						
+						String[] n = we[0].split("\\#");
+						
+						String name = n[1].trim();
+						
+						String[] v = we[1].split("\\#");
+						
+						int value = Integer.parseInt(v[1].trim());
+						
+						String[] r = we[2].split("\\#");
+						
+						String range = r[1].trim();
+						
+						String[] d = we[3].split("\\#");
+						
+						String damage = d[1].trim();
+						
+						String[] a = we[4].split("\\#");
+						
+						int attackBonus = Integer.parseInt(a[1].trim());
+						
+						String[] c = we[5].split("\\#");
+						
+						String critical = c[1].trim();
+						
+						String[] t = we[6].split("\\#");
+						
+						String type = t[1].trim();
+						
+						String[] no = we[7].split("\\#");
+						
+						String notes = no[1].trim();
+						
+						Weapon newWeapon = new Weapon(name, value, range, damage, attackBonus, critical, type, notes);
+						
+						weapons.add(newWeapon);
+					}
+					
+					sheet.setWeapons(weapons);
+					break;
+				case "Armor":
+					ArrayList<Armor> armor = new ArrayList<>();
+					
+					String str = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
+					
+					String[] a = str.split(",");
+					
+					for(int x = 0; x < a.length; x++) {
+						String[] ar = a[x].split("\\|");
+						
+						String[] n = ar[0].split("\\#");
+						
+						String name = n[1].trim();
+						
+						String[] v = ar[1].split("\\#");
+						
+						int value = Integer.parseInt(v[1].trim());
+						
+						String[] t = ar[2].split("\\#");
+						
+						String type = t[1].trim();
+						
+						String[] b = ar[3].split("\\#");
+						
+						int bonus = Integer.parseInt(b[1].trim());
+						
+						String[] p = ar[4].split("\\#");
+						
+						int penalty = Integer.parseInt(p[1].trim());
+						
+						String[] sf = ar[5].split("\\#");
+						
+						int spellFailure = Integer.parseInt(sf[1].trim());
+						
+						String[] wh = ar[6].split("\\#");
+						
+						int weight = Integer.parseInt(wh[1].trim());
+						
+						String[] pr = ar[7].split("\\#");
+						
+						String properties = pr[1].trim();
+						
+						Armor armr = new Armor(name, value, type, bonus, penalty, spellFailure, weight, properties);
+						
+						armor.add(armr);
+					}
+					
+					sheet.setArmor(armor);
+					break;
+				case "Items":
+					ArrayList<Item> items = new ArrayList<>();
+					
+					String stri = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
+					
+					String[] it = stri.split(",");
+					
+					for(int x = 0; x < it.length; x++) {
+						String[] ite = it[x].split("\\|");
+						
+						String[] n = ite[0].split("\\#");
+						
+						String name = n[1].trim();
+						
+						String[] v = ite[1].split("\\#");
+						
+						int value = Integer.parseInt(v[1].trim());
+						
+						String[] l = ite[2].split("\\#");
+						
+						String location = l[1].trim();
+						
+						String[] t = ite[3].split("\\#");
+						
+						String type = t[1].trim();
+						
+						String[] d = ite[4].split("\\#");
+						
+						String description = d[1].trim();
+						
+						Item item = new Item(name, value, location, type, description);
+						
+						items.add(item);
+					}
+					
+					sheet.setItems(items);
+					break;
+				case "Spells":
+					ArrayList<Spell> spells = new ArrayList<>();
+					
+					String strin = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
+					
+					String[] sp = strin.split(",");
+					
+					for(int x = 0; x < sp.length; x++) {
+						String[] spe = sp[x].split("\\|");
+						
+						String[] n = spe[0].split("\\#");
+						
+						String name = n[1].trim();
+						
+						String[] l = spe[1].split("\\#");
+						
+						int level = Integer.parseInt(l[1].trim());
+						
+						String[] sc = spe[2].split("\\#");
+						
+						String school = sc[1].trim();
+						
+						String[] ss = spe[3].split("\\#");
+						
+						String subschool = ss[1].trim();
+						
+						String[] p = spe[4].split("\\#");
+						
+						int prepared = Integer.parseInt(p[1].trim());
+						
+						String[] c = spe[5].split("\\#");
+						
+						int cast = Integer.parseInt(c[1].trim());
+						
+						String[] no = spe[6].split("\\#");
+						
+						String notes = no[1].trim();
+						
+						String[] d = spe[7].split("\\#");
+						
+						String description = d[1].trim();
+						
+						Spell spell = new Spell(name, level, school, subschool, prepared, cast, notes, description);
+						
+						spells.add(spell);
+					}
+					
+					sheet.setSpells(spells);
+					break;
+				case "SpellsKnown0":
+					sheet.setSpellsKnown0(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc0":
+					sheet.setDc0(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd0":
+					sheet.setSpd0(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown1":
+					sheet.setSpellsKnown1(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc1":
+					sheet.setDc1(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd1":
+					sheet.setSpd1(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells1":
+					sheet.setBonusSpells1(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown2":
+					sheet.setSpellsKnown2(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc2":
+					sheet.setDc2(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd2":
+					sheet.setSpd2(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells2":
+					sheet.setBonusSpells2(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown3":
+					sheet.setSpellsKnown3(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc3":
+					sheet.setDc3(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd3":
+					sheet.setSpd3(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells3":
+					sheet.setBonusSpells3(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown4":
+					sheet.setSpellsKnown4(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc4":
+					sheet.setDc4(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd4":
+					sheet.setSpd4(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells4":
+					sheet.setBonusSpells4(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown6":
+					sheet.setSpellsKnown6(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc6":
+					sheet.setDc6(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd6":
+					sheet.setSpd6(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells6":
+					sheet.setBonusSpells6(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown7":
+					sheet.setSpellsKnown7(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc7":
+					sheet.setDc7(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd7":
+					sheet.setSpd7(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells7":
+					sheet.setBonusSpells7(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown8":
+					sheet.setSpellsKnown8(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc8":
+					sheet.setDc8(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd8":
+					sheet.setSpd8(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells8":
+					sheet.setBonusSpells8(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "SpellsKnown9":
+					sheet.setSpellsKnown9(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Dc9":
+					sheet.setDc9(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Spd9":
+					sheet.setSpd9(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "BonusSpells9":
+					sheet.setBonusSpells9(Integer.parseInt(splitData[1].trim()));
+					break;
+				case "Abilities":
+					ArrayList<Ability> abilities = new ArrayList<>();
+					
+					String string = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
+					
+					String[] ab = string.split(",");
+					
+					for(int x = 0; x < ab.length; x++) {
+						String[] spe = ab[x].split("\\|");
+						
+						String[] n = spe[0].split("\\#");
+						
+						String name = n[1].trim();
+						
+						String[] t = spe[1].split("\\#");
+						
+						String type = t[1].trim();
+						
+						String[] no = spe[2].split("\\#");
+						
+						String notes = no[1].trim();
+						
+						String[] at = spe[3].split("\\#");
+						
+						AbilityType abilityType = null;
+						if (at[1].trim().equals("FEAT")) {
+							abilityType = AbilityType.FEAT;
+						} else if (at[1].trim().equals("SPECIAL_ABILITY")) {
+							abilityType = AbilityType.SPECIAL_ABILITY;
+						} else if (at[1].trim().equals("TRAIT")) {
+							abilityType = AbilityType.TRAIT;
+						}
+						
+						Ability ability = new Ability(name, type, notes, abilityType);
+						
+						abilities.add(ability);
+					}
+					
+					sheet.setAbilities(abilities);
+					break;
+				case "Skills":
+					HashMap<NameOfSkill, Skill> skills = new HashMap<>();
+					
+					String stringS = splitData[1].replaceAll("\\{", "").replaceAll("\\}", "").replaceAll("=", "\\|") ;
+					
+					String[] sk = stringS.split(",");
+					
+					for(int x = 0; x < sk.length; x++) {
+						String[] skilz = sk[x].split("\\|");
+						
+						NameOfSkill name = null;
+						if (skilz[0].trim().equals("ACROBATICS")) {
+							name = NameOfSkill.ACROBATICS;
+						} else if (skilz[0].trim().equals("APPRAISE")) {
+							name = NameOfSkill.APPRAISE;
+						} else if (skilz[0].trim().equals("BLUFF")) {
+							name = NameOfSkill.BLUFF;
+						} else if (skilz[0].trim().equals("CLIMB")) {
+							name = NameOfSkill.CLIMB;
+						} else if (skilz[0].trim().equals("CRAFT1")) {
+							name = NameOfSkill.CRAFT1;
+						} else if (skilz[0].trim().equals("CRAFT2")) {
+							name = NameOfSkill.CRAFT2;
+						} else if (skilz[0].trim().equals("CRAFT3")) {
+							name = NameOfSkill.CRAFT3;
+						} else if (skilz[0].trim().equals("DIPLOMACY")) {
+							name = NameOfSkill.DIPLOMACY;
+						} else if (skilz[0].trim().equals("DISABLE_DEVICE")) {
+							name = NameOfSkill.DISABLE_DEVICE;
+						} else if (skilz[0].trim().equals("DISGUISE")) {
+							name = NameOfSkill.DISGUISE;
+						} else if (skilz[0].trim().equals("ESCAPE_ARTIST")) {
+							name = NameOfSkill.ESCAPE_ARTIST;
+						} else if (skilz[0].trim().equals("FLY")) {
+							name = NameOfSkill.FLY;
+						} else if (skilz[0].trim().equals("HANDLE_ANIMAL")) {
+							name = NameOfSkill.HANDLE_ANIMAL;
+						} else if (skilz[0].trim().equals("HEAL")) {
+							name = NameOfSkill.HEAL;
+						} else if (skilz[0].trim().equals("INTIMIDATE")) {
+							name = NameOfSkill.INTIMIDATE;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_A")) {
+							name = NameOfSkill.KNOWLEDGE_A;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_D")) {
+							name = NameOfSkill.KNOWLEDGE_D;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_E")) {
+							name = NameOfSkill.KNOWLEDGE_E;
+						} else if (skilz[0].trim().equals("kNOWLEDGE_G")) {
+							name = NameOfSkill.KNOWLEDGE_G;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_H")) {
+							name = NameOfSkill.KNOWLEDGE_H;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_L")) {
+							name = NameOfSkill.KNOWLEDGE_L;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_NA")) {
+							name = NameOfSkill.KNOWLEDGE_NA;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_NO")) {
+							name = NameOfSkill.KNOWLEDGE_NO;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_P")) {
+							name = NameOfSkill.KNOWLEDGE_P;
+						} else if (skilz[0].trim().equals("KNOWLEDGE_R")) {
+							name = NameOfSkill.KNOWLEDGE_R;
+						} else if (skilz[0].trim().equals("LINGUISTICS")) {
+							name = NameOfSkill.LINGUISTICS;
+						} else if (skilz[0].trim().equals("PERCEPTION")) {
+							name = NameOfSkill.PERCEPTION;
+						} else if (skilz[0].trim().equals("PERFORM1")) {
+							name = NameOfSkill.PERFORM1;
+						} else if (skilz[0].trim().equals("PERFORM2")) {
+							name = NameOfSkill.PERFORM2;
+						} else if (skilz[0].trim().equals("PROFESSION1")) {
+							name = NameOfSkill.PROFESSION1;
+						} else if (skilz[0].trim().equals("PROFESSION2")) {
+							name = NameOfSkill.PROFESSION2;
+						} else if (skilz[0].trim().equals("RIDE")) {
+							name = NameOfSkill.RIDE;
+						} else if (skilz[0].trim().equals("SENSE_MOTIVE")) {
+							name = NameOfSkill.SENSE_MOTIVE;
+						} else if (skilz[0].trim().equals("SLEIGHT_OF_HAND")) {
+							name = NameOfSkill.SLEIGHT_OF_HAND;
+						} else if (skilz[0].trim().equals("SPELLCRAFT")) {
+							name = NameOfSkill.SPELLCRAFT;
+						} else if (skilz[0].trim().equals("STEALTH")) {
+							name = NameOfSkill.STEALTH;
+						} else if (skilz[0].trim().equals("SURVIVAL")) {
+							name = NameOfSkill.SURVIVAL;
+						} else if (skilz[0].trim().equals("SWIM")) {
+							name = NameOfSkill.SWIM;
+						} else if (skilz[0].trim().equals("USE_MAGIC_DEVICE")) {
+							name = NameOfSkill.USE_MAGIC_DEVICE;
+						}
+						
+						String[] abil = skilz[1].split("\\#");
+						
+						SkillTiedAbility ability = null;
+						if(abil[1].trim().equals("CHA")) {
+							ability = SkillTiedAbility.CHA;
+						} else if(abil[1].trim().equals("DEX")) {
+							ability = SkillTiedAbility.DEX;
+						} else if(abil[1].trim().equals("INT")) {
+							ability = SkillTiedAbility.INT;
+						} else if(abil[1].trim().equals("STR")) {
+							ability = SkillTiedAbility.STR;
+						} else if(abil[1].trim().equals("WIS")) {
+							ability = SkillTiedAbility.WIS;
+						}
+						
+						String[] r = skilz[2].split("\\#");
+						
+						int rank = Integer.parseInt(r[1].trim());
+						
+						String[] m = skilz[3].split("\\#");
+						
+						int miscMod = Integer.parseInt(m[1].trim());
+						
+						Skill skill = new Skill(name, ability, rank, miscMod);
+						
+						skills.put(name, skill);
+					}
+					
+					sheet.setSkills(skills);
+					break;
 			}
 		}
 		
 		return sheet;
 	}
 	
-	public static boolean writeToFile(String filePath, String characterName, String output) {
+	public static boolean writeToFile(String filePath, String characterName, CharacterSheet sheet) {
+		String output = sheet.toString();
 		
 		if (filePath == null || output == null) {
 			return false;

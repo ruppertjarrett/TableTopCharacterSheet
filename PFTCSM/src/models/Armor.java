@@ -13,8 +13,15 @@ public class Armor {
 	public Armor(){
 		
 	}
-	public Armor(String name, int value, String type, int bonus, int penalty, int spellFailure, int weight, String Properties){
-		
+	public Armor(String name, int value, String type, int bonus, int penalty, int spellFailure, int weight, String properties){
+		setName(name);
+		setValue(value);
+		setType(type);
+		setBonus(bonus);
+		setPenalty(penalty);
+		setSpellFailure(spellFailure);
+		setWeight(weight);
+		setProperties(properties);
 	}
 	public String getName() {
 		return name;
@@ -63,5 +70,46 @@ public class Armor {
 	}
 	public void setProperties(String properties) {
 		this.properties = properties;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Name # ");
+		sb.append(getName());
+		sb.append(" | ");
+		
+		sb.append("Value # ");
+		sb.append(getValue());
+		sb.append(" | ");
+		
+		sb.append("Type # ");
+		sb.append(getType());
+		sb.append(" | ");
+		
+		sb.append("Bonus # ");
+		sb.append(getBonus());
+		sb.append(" | ");
+		
+		sb.append("Penalty # ");
+		sb.append(getPenalty());
+		sb.append(" | ");
+		
+		sb.append("SpellFailure # ");
+		sb.append(getSpellFailure());
+		sb.append(" | ");
+		
+		sb.append("Weight # ");
+		sb.append(getWeight());
+		sb.append(" | ");
+		
+		sb.append("Properties # ");
+		sb.append(getProperties());
+		sb.append(" | ");
+		
+		sb.append("\r	");
+		
+		return sb.toString();
 	}
 }

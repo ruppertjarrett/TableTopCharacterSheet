@@ -9,9 +9,11 @@ public class Skill {
 	private int rank;
 	private int miscMod;
 	
-	public Skill(NameOfSkill name, SkillTiedAbility ability){
+	public Skill(NameOfSkill name, SkillTiedAbility ability, int rank, int miscMod){
 		this.name = name;
 		this.ability = ability;
+		setRank(rank);
+		setMiscMod(miscMod);
 	}
 	
 	public int getTotal(){
@@ -43,4 +45,24 @@ public class Skill {
 		return ability;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Ability # ");
+		sb.append(getAbility());
+		sb.append(" | ");
+		
+		sb.append("Rank # ");
+		sb.append(getRank());
+		sb.append(" | ");
+		
+		sb.append("MiscMod # ");
+		sb.append(getMiscMod());
+		sb.append(" | ");
+		
+		sb.append("\r	");
+		
+		return sb.toString();
+	}
 }

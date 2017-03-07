@@ -1223,6 +1223,481 @@ public class CharacterSheet
 	{
 		this.skills = skills;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Level : ");
+		sb.append(getLevel());
+		sb.append(";\r");
+		
+		sb.append("Age : ");
+		sb.append(getAge());
+		sb.append(";\r");
+		
+		sb.append("Weight : ");
+		sb.append(getWeight());
+		sb.append(";\r");
+		
+		sb.append("StrBase : ");
+		sb.append(getStrBase());
+		sb.append(";\r");
+		
+		sb.append("StrMod : ");
+		sb.append(getStrMod());
+		sb.append(";\r");
+		
+		sb.append("StrTemp : ");
+		sb.append(getStrTemp());
+		sb.append(";\r");
+		
+		sb.append("StrTempMod : ");
+		sb.append(getStrTempMod());
+		sb.append(";\r");
+		
+		sb.append("DexBase : ");
+		sb.append(getDexBase());
+		sb.append(";\r");
+		
+		sb.append("DexMod : ");
+		sb.append(getDexMod());
+		sb.append(";\r");
+		
+		sb.append("DexTemp : ");
+		sb.append(getDexTemp());
+		sb.append(";\r");
+		
+		sb.append("DexTempMod : ");
+		sb.append(getDexTempMod());
+		sb.append(";\r");
+		
+		sb.append("ConBase : ");
+		sb.append(getConBase());
+		sb.append(";\r");
+		
+		sb.append("ConMod : ");
+		sb.append(getConMod());
+		sb.append(";\r");
+		
+		sb.append("ConTemp : ");
+		sb.append(getConTemp());
+		sb.append(";\r");
+		
+		sb.append("ConTempMod : ");
+		sb.append(getConTempMod());
+		sb.append(";\r");
+		
+		sb.append("IntBase : ");
+		sb.append(getIntBase());
+		sb.append(";\r");
+		
+		sb.append("IntMod : ");
+		sb.append(getIntMod());
+		sb.append(";\r");
+		
+		sb.append("IntTemp : ");
+		sb.append(getIntTemp());
+		sb.append(";\r");
+		
+		sb.append("IntTempMod : ");
+		sb.append(getIntTempMod());
+		sb.append(";\r");
+		
+		sb.append("WisBase : ");
+		sb.append(getWisBase());
+		sb.append(";\r");
+		
+		sb.append("WisMod : ");
+		sb.append(getWisMod());
+		sb.append(";\r");
+		
+		sb.append("WisTemp : ");
+		sb.append(getWisTemp());
+		sb.append(";\r");
+		
+		sb.append("WisTempMod : ");
+		sb.append(getWisTempMod());
+		sb.append(";\r");
+		
+		sb.append("BaseHP : ");
+		sb.append(getBaseHP());
+		sb.append(";\r");
+		
+		sb.append("CurHP : ");
+		sb.append(getCurHP());
+		sb.append(";\r");
+		
+		sb.append("BaseSpeed : ");
+		sb.append(getBaseSpeed());
+		sb.append(";\r");
+		
+		sb.append("SpeedWithArmor : ");
+		sb.append(getSpeedWithArmor());
+		sb.append(";\r");
+		
+		sb.append("FlySpeed : ");
+		sb.append(getFlySpeed());
+		sb.append(";\r");
+		
+		sb.append("SwimSpeed : ");
+		sb.append(getSwimSpeed());
+		sb.append(";\r");
+		
+		sb.append("ClimbSpeed : ");
+		sb.append(getClimbSpeed());
+		sb.append(";\r");
+		
+		sb.append("BurrowSpeed : ");
+		sb.append(getBurrowSpeed());
+		sb.append(";\r");
+		
+		sb.append("SpeedMod : ");
+		sb.append(getSpeedMod());
+		sb.append(";\r");
+		
+		sb.append("NonlethalDamage : ");
+		sb.append(getNonlethalDamage());
+		sb.append(";\r");
+		
+		sb.append("ArmorBonus : ");
+		sb.append(getArmorBonus());
+		sb.append(";\r");
+		
+		sb.append("ShieldBonus : ");
+		sb.append(getShieldBonus());
+		sb.append(";\r");
+		
+		sb.append("SizeArmorMod : ");
+		sb.append(getSizeArmorMod());
+		sb.append(";\r");
+		
+		sb.append("NaturalArmor : ");
+		sb.append(getNaturalArmor());
+		sb.append(";\r");
+		
+		sb.append("DeflectArmorMod : ");
+		sb.append(getDeflectArmorMod());
+		sb.append(";\r");
+		
+		sb.append("MiscArmorMod : ");
+		sb.append(getMiscArmorMod());
+		sb.append(";\r");
+		
+		sb.append("InitiativeMod : ");
+		sb.append(getInitiativeMod());
+		sb.append(";\r");
+		
+		sb.append("MiscInitiativeMod : ");
+		sb.append(getMiscInitiativeMod());
+		sb.append(";\r");
+		
+		sb.append("BaseSaveF : ");
+		sb.append(getBaseSaveF());
+		sb.append(";\r");
+		
+		sb.append("BaseSaveR : ");
+		sb.append(getBaseSaveR());
+		sb.append(";\r");
+		
+		sb.append("BaseSaveW : ");
+		sb.append(getBaseSaveW());
+		sb.append(";\r");
+		
+		sb.append("MagicModF : ");
+		sb.append(getMagicModF());
+		sb.append(";\r");
+		
+		sb.append("MagicModR : ");
+		sb.append(getMagicModR());
+		sb.append(";\r");
+		
+		sb.append("MagicModW : ");
+		sb.append(getMagicModW());
+		sb.append(";\r");
+		
+		sb.append("MiscModF : ");
+		sb.append(getMiscModF());
+		sb.append(";\r");
+		
+		sb.append("MiscModR : ");
+		sb.append(getMiscModR());
+		sb.append(";\r");
+		
+		sb.append("MiscModW : ");
+		sb.append(getMiscModW());
+		sb.append(";\r");
+		
+		sb.append("TempModF : ");
+		sb.append(getTempModF());
+		sb.append(";\r");
+		
+		sb.append("TempModR : ");
+		sb.append(getTempModR());
+		sb.append(";\r");
+		
+		sb.append("TempModW : ");
+		sb.append(getTempModW());
+		sb.append(";\r");
+		
+		sb.append("BaseAttackBonus : ");
+		sb.append(getBaseAttackBonus());
+		sb.append(";\r");
+		
+		sb.append("Experience : ");
+		sb.append(getExperience());
+		sb.append(";\r");
+		
+		sb.append("ExpToNextLvl : ");
+		sb.append(getExpToNextLvl());
+		sb.append(";\r");
+		
+		sb.append("CP : ");
+		sb.append(getCP());
+		sb.append(";\r");
+		
+		sb.append("SP : ");
+		sb.append(getSP());
+		sb.append(";\r");
+		
+		sb.append("GP : ");
+		sb.append(getGP());
+		sb.append(";\r");
+		
+		sb.append("PP : ");
+		sb.append(getPP());
+		sb.append(";\r");
+		
+		sb.append("Name : ");
+		sb.append(getName());
+		sb.append(";\r");
+		
+		sb.append("Homeland : ");
+		sb.append(getHomeland());
+		sb.append(";\r");
+		
+		sb.append("Size : ");
+		sb.append(getSize());
+		sb.append(";\r");
+		
+		sb.append("Height : ");
+		sb.append(getHeight());
+		sb.append(";\r");
+		
+		sb.append("Hair : ");
+		sb.append(getHair());
+		sb.append(";\r");
+		
+		sb.append("Eyes : ");
+		sb.append(getEyes());
+		sb.append(";\r");
+		
+		sb.append("SpellResistance : ");
+		sb.append(getSpellResistance());
+		sb.append(";\r");
+		
+		sb.append("CharClass : ");
+		sb.append(getCharClass());
+		sb.append(";\r");
+		
+		sb.append("Alignment : ");
+		sb.append(getAlignment());
+		sb.append(";\r");
+		
+		sb.append("Deity : ");
+		sb.append(getDeity());
+		sb.append(";\r");
+		
+		sb.append("Race : ");
+		sb.append(getRace());
+		sb.append(";\r");
+		
+		sb.append("Gender : ");
+		sb.append(getGender());
+		sb.append(";\r");
+		
+		sb.append("Weapons : ");
+		sb.append(getWeapons());
+		sb.append(";\r");
+		
+		sb.append("Armor : ");
+		sb.append(getArmor());
+		sb.append(";\r");
+		
+		sb.append("Items : ");
+		sb.append(getItems());
+		sb.append(";\r");
+		
+		sb.append("Spells : ");
+		sb.append(getSpells());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown0 : ");
+		sb.append(getSpellsKnown0());
+		sb.append(";\r");
+		
+		sb.append("Dc0 : ");
+		sb.append(getDc0());
+		sb.append(";\r");
+		
+		sb.append("Spd0 : ");
+		sb.append(getSpd0());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown1 : ");
+		sb.append(getSpellsKnown1());
+		sb.append(";\r");
+		
+		sb.append("Dc1 : ");
+		sb.append(getDc1());
+		sb.append(";\r");
+		
+		sb.append("Spd1 : ");
+		sb.append(getSpd1());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells1 : ");
+		sb.append(getBonusSpells1());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown2 : ");
+		sb.append(getSpellsKnown2());
+		sb.append(";\r");
+		
+		sb.append("Dc2 : ");
+		sb.append(getDc2());
+		sb.append(";\r");
+		
+		sb.append("Spd2 : ");
+		sb.append(getSpd2());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells2 : ");
+		sb.append(getBonusSpells2());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown3 : ");
+		sb.append(getSpellsKnown3());
+		sb.append(";\r");
+		
+		sb.append("Dc3 : ");
+		sb.append(getDc3());
+		sb.append(";\r");
+		
+		sb.append("Spd3 : ");
+		sb.append(getSpd3());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells3 : ");
+		sb.append(getBonusSpells3());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown4 : ");
+		sb.append(getSpellsKnown4());
+		sb.append(";\r");
+		
+		sb.append("Dc4 : ");
+		sb.append(getDc4());
+		sb.append(";\r");
+		
+		sb.append("Spd4 : ");
+		sb.append(getSpd4());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells4 : ");
+		sb.append(getBonusSpells4());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown5 : ");
+		sb.append(getSpellsKnown5());
+		sb.append(";\r");
+		
+		sb.append("Dc5 : ");
+		sb.append(getDc5());
+		sb.append(";\r");
+		
+		sb.append("Spd5 : ");
+		sb.append(getSpd5());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells5 : ");
+		sb.append(getBonusSpells5());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown6 : ");
+		sb.append(getSpellsKnown6());
+		sb.append(";\r");
+		
+		sb.append("Dc6 : ");
+		sb.append(getDc6());
+		sb.append(";\r");
+		
+		sb.append("Spd6 : ");
+		sb.append(getSpd6());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells6 : ");
+		sb.append(getBonusSpells6());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown7 : ");
+		sb.append(getSpellsKnown7());
+		sb.append(";\r");
+		
+		sb.append("Dc7 : ");
+		sb.append(getDc7());
+		sb.append(";\r");
+		
+		sb.append("Spd7 : ");
+		sb.append(getSpd7());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells7 : ");
+		sb.append(getBonusSpells7());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown8 : ");
+		sb.append(getSpellsKnown8());
+		sb.append(";\r");
+		
+		sb.append("Dc8 : ");
+		sb.append(getDc8());
+		sb.append(";\r");
+		
+		sb.append("Spd8 : ");
+		sb.append(getSpd8());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells8 : ");
+		sb.append(getBonusSpells8());
+		sb.append(";\r");
+		
+		sb.append("SpellsKnown9 : ");
+		sb.append(getSpellsKnown9());
+		sb.append(";\r");
+		
+		sb.append("Dc9 : ");
+		sb.append(getDc9());
+		sb.append(";\r");
+		
+		sb.append("Spd9 : ");
+		sb.append(getSpd9());
+		sb.append(";\r");
+		
+		sb.append("BonusSpells9 : ");
+		sb.append(getBonusSpells9());
+		sb.append(";\r");
+		
+		sb.append("Abilities : ");
+		sb.append(getAbilities());
+		sb.append(";\r");
+		
+		sb.append("Skills : ");
+		sb.append(getSkills());
+		sb.append(";\r");
+		
+		return sb.toString();
+	}
 }
 /*
  * +getTouchAC() : int +getFlatFootedAC() : int +getCMB() : int +getCMD() : int

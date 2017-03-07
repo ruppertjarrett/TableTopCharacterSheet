@@ -13,7 +13,10 @@ public class Ability {
 	}
 	
 	public Ability(String name, String type, String notes, AbilityType abilityType){
-		
+		setName(name);
+		setType(type);
+		setNotes(notes);
+		setAbilityType(abilityType);
 	}
 
 	public String getName() {
@@ -48,4 +51,28 @@ public class Ability {
 		this.abilityType = abilityType;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Name # ");
+		sb.append(getName());
+		sb.append(" | ");
+		
+		sb.append("Type # ");
+		sb.append(getType());
+		sb.append(" | ");
+		
+		sb.append("Notes # ");
+		sb.append(getNotes());
+		sb.append(" | ");
+		
+		sb.append("AbilityType # ");
+		sb.append(getAbilityType());
+		sb.append(" | ");
+		
+		sb.append("\r	");
+		
+		return sb.toString();
+	}
 }

@@ -15,7 +15,14 @@ public class Weapon {
 	}
 	
 	public Weapon(String name, int value, String range, String damage, int attackBonus, String critical, String type, String notes){
-		
+		setName(name);
+		setValue(value);
+		setRange(range);
+		setDamage(damage);
+		setAttackBonus(attackBonus);
+		setCritical(critical);
+		setType(type);
+		setNotes(notes);
 	}
 
 	public String getName() {
@@ -86,37 +93,39 @@ public class Weapon {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("Name : ");
+		sb.append("Name # ");
 		sb.append(getName());
 		sb.append(" | ");
 		
-		sb.append("Value : ");
+		sb.append("Value # ");
 		sb.append(getValue());
 		sb.append(" | ");
 		
-		sb.append("Range : ");
+		sb.append("Range # ");
 		sb.append(getRange());
 		sb.append(" | ");
 		
-		sb.append("Damage : ");
+		sb.append("Damage # ");
 		sb.append(getDamage());
 		sb.append(" | ");
 		
-		sb.append("AttackBonus : ");
+		sb.append("AttackBonus # ");
 		sb.append(getAttackBonus());
 		sb.append(" | ");
 		
-		sb.append("Critical : ");
+		sb.append("Critical # ");
 		sb.append(getCritical());
 		sb.append(" | ");
 		
-		sb.append("Type : ");
+		sb.append("Type # ");
 		sb.append(getType());
 		sb.append(" | ");
 		
-		sb.append("Notes : ");
+		sb.append("Notes # ");
 		sb.append(getNotes());
 		sb.append(" | ");
+		
+		sb.append("\r	");
 		
 		return sb.toString();
 	}
