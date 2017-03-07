@@ -125,7 +125,7 @@ public class Spell {
 		sb.append(getDescription());
 		sb.append(" | ");
 		
-		sb.append("\r	");
+		sb.append("\r	+");
 		
 		return sb.toString();
 	}

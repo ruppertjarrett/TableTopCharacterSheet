@@ -536,7 +536,7 @@ public class FileManager {
 					
 					String st = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
 					
-					String[] w = st.split(",");
+					String[] w = st.split("\\+,");
 					
 					for(int x = 0; x < w.length; x++) {
 						String[] we = w[x].split("\\|");
@@ -585,7 +585,7 @@ public class FileManager {
 					
 					String str = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
 					
-					String[] a = str.split(",");
+					String[] a = str.split("\\+,");
 					
 					for(int x = 0; x < a.length; x++) {
 						String[] ar = a[x].split("\\|");
@@ -634,7 +634,7 @@ public class FileManager {
 					
 					String stri = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
 					
-					String[] it = stri.split(",");
+					String[] it = stri.split("\\+,");
 					
 					for(int x = 0; x < it.length; x++) {
 						String[] ite = it[x].split("\\|");
@@ -671,7 +671,7 @@ public class FileManager {
 					
 					String strin = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
 					
-					String[] sp = strin.split(",");
+					String[] sp = strin.split("\\+,");
 					
 					for(int x = 0; x < sp.length; x++) {
 						String[] spe = sp[x].split("\\|");
@@ -825,7 +825,7 @@ public class FileManager {
 					
 					String string = splitData[1].replaceAll("\\[", "").replaceAll("\\]", "");
 					
-					String[] ab = string.split(",");
+					String[] ab = string.split("\\+,");
 					
 					for(int x = 0; x < ab.length; x++) {
 						String[] spe = ab[x].split("\\|");
@@ -865,7 +865,7 @@ public class FileManager {
 					
 					String stringS = splitData[1].replaceAll("\\{", "").replaceAll("\\}", "").replaceAll("=", "\\|") ;
 					
-					String[] sk = stringS.split(",");
+					String[] sk = stringS.split("\\+,");
 					
 					for(int x = 0; x < sk.length; x++) {
 						String[] skilz = sk[x].split("\\|");

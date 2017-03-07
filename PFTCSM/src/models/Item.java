@@ -82,7 +82,7 @@ public class Item {
 		sb.append(getDescription());
 		sb.append(" | ");
 		
-		sb.append("\r	");
+		sb.append("\r	+");
 		
 		return sb.toString();
 	}

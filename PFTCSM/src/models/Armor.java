@@ -108,7 +108,7 @@ public class Armor {
 		sb.append(getProperties());
 		sb.append(" | ");
 		
-		sb.append("\r	");
+		sb.append("\r	+");
 		
 		return sb.toString();
 	}

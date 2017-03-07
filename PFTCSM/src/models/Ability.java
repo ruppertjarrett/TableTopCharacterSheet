@@ -71,7 +71,7 @@ public class Ability {
 		sb.append(getAbilityType());
 		sb.append(" | ");
 		
-		sb.append("\r	");
+		sb.append("\r	+");
 		
 		return sb.toString();
 	}

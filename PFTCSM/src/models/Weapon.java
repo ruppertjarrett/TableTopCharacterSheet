@@ -125,7 +125,7 @@ public class Weapon {
 		sb.append(getNotes());
 		sb.append(" | ");
 		
-		sb.append("\r	");
+		sb.append("\r	+");
 		
 		return sb.toString();
 	}

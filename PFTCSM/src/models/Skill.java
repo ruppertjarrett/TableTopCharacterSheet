@@ -61,7 +61,7 @@ public class Skill {
 		sb.append(getMiscMod());
 		sb.append(" | ");
 		
-		sb.append("\r	");
+		sb.append("\r	+");
 		
 		return sb.toString();
 	}
