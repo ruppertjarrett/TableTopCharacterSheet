@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
@@ -380,9 +381,9 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ScrollPane hbarPolicy="NEVER" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1500.0" prefWidth="814.0" vbarPolicy="ALWAYS" vvalue="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1500.0" prefWidth="814.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
-                              <GridPane prefHeight="750.0" prefWidth="799.0">
+                              <GridPane maxHeight="-Infinity" prefHeight="1500.0" prefWidth="799.0">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                 </columnConstraints>
@@ -396,11 +397,12 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="750.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
                                     <Label alignment="CENTER" prefHeight="225.0" prefWidth="800.0" text="Defense">
                                        <font>
-                                          <Font size="36.0" />
+                                          <Font size="48.0" />
                                        </font>
                                     </Label>
                                     <GridPane GridPane.rowIndex="1">
@@ -978,7 +980,7 @@
                                                 <Insets left="20.0" right="20.0" />
                                              </GridPane.margin>
                                           </TextField>
-                                          <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="116.0" text="+" GridPane.columnIndex="3">
+                                          <Label fx:id="bab" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="116.0" text="+" GridPane.columnIndex="3">
                                              <font>
                                                 <Font size="24.0" />
                                              </font>
@@ -993,6 +995,298 @@
                                                 <Font size="24.0" />
                                              </font>
                                           </Label>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.rowIndex="8">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="83.0" prefWidth="421.0" text="Spell Resistances">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="spellResistances" alignment="CENTER" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="25.0" right="25.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.rowIndex="9">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="123.0" prefWidth="812.0" text="Offense">
+                                             <font>
+                                                <Font size="48.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="172.0" prefWidth="176.0" text="Base Attack Bonus" textAlignment="CENTER" wrapText="true">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" prefHeight="223.0" prefWidth="174.0" text="Initiative" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="baseAttackBonus" alignment="CENTER" GridPane.columnIndex="1" />
+                                                <TextField fx:id="dexMod1" GridPane.columnIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField GridPane.columnIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label prefHeight="186.0" prefWidth="190.0" text="=" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="164.0" prefWidth="183.0" text="+" GridPane.columnIndex="4">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.rowIndex="2">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="230.0" prefWidth="173.0" text="CMB">
+                                                   <font>
+                                                      <Font size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="BOTTOM_CENTER" prefHeight="155.0" prefWidth="166.0" text="Combat Maneuver Bonus" textAlignment="CENTER" wrapText="true">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="196.0" prefWidth="172.0" text="Total" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="155.0" prefWidth="189.0" text="Base Attack Bonus" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="167.0" prefWidth="195.0" text="Strength Mod" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="155.0" prefWidth="202.0" text="Size Mod" GridPane.columnIndex="4">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="17.0" prefWidth="219.0" text="=" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="17.0" prefWidth="206.0" text="+" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="17.0" prefWidth="210.0" text="+" GridPane.columnIndex="4">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="cmbTotal" alignment="CENTER" prefHeight="96.0" prefWidth="161.0" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="cmbSize" alignment="CENTER" GridPane.columnIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="cmbStr" alignment="CENTER" editable="false" GridPane.columnIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="cmbBab" alignment="CENTER" editable="false" GridPane.columnIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="20.0" right="20.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.rowIndex="3">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="176.0" prefWidth="118.0" text="Speed">
+                                                   <font>
+                                                      <Font size="30.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="195.0" prefWidth="156.0" text="Base Speed" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="198.0" prefWidth="153.0" text="With Armor" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="188.0" prefWidth="129.0" text="Fly" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="176.0" prefWidth="137.0" text="Swim" GridPane.columnIndex="4">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="196.0" prefWidth="138.0" text="Climb" GridPane.columnIndex="5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" prefHeight="207.0" prefWidth="139.0" text="Burrow" GridPane.columnIndex="6">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="190.0" text="FT." GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="129.0" text="FT." GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="157.0" text="FT." GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="157.0" text="FT." GridPane.columnIndex="4">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="157.0" text="FT." GridPane.columnIndex="5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="209.0" text="FT." GridPane.columnIndex="6">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField alignment="CENTER" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="25.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField alignment="CENTER" GridPane.columnIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="25.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField alignment="CENTER" GridPane.columnIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="25.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField alignment="CENTER" GridPane.columnIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="25.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField alignment="CENTER" GridPane.columnIndex="5">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="25.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField alignment="CENTER" GridPane.columnIndex="6">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" right="25.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane GridPane.rowIndex="4">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.14288330078125" minWidth="10.0" prefWidth="128.57144165039062" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="677.2857055664062" minWidth="10.0" prefWidth="670.4285583496094" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="180.0" prefWidth="149.0" text="Weapons">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                             </children>
+                                          </GridPane>
                                        </children>
                                     </GridPane>
                                  </children>
@@ -1124,7 +1418,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="800.0">
                      <children>
-                        <ScrollPane hbarPolicy="NEVER" prefHeight="574.0" prefWidth="814.0" vbarPolicy="ALWAYS" vvalue="0.87">
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="574.0" prefWidth="814.0" vbarPolicy="ALWAYS">
                            <content>
                               <GridPane prefHeight="1600.0" prefWidth="800.0">
                                 <columnConstraints>
