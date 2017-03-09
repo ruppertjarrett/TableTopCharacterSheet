@@ -21,7 +21,7 @@ public class GuiMain extends Application {
         // REPLACE HBox WITH FlowPane
         // GIVE BORDERPANE fx:id="rootPane"
         // GIVE FX:IDS TO CREATION BUTTONS
-        // KNOWLEDGERBONUS, SENSEMOTIVE NEEDS BONUS, 
+        // KNOWLEDGERBONUS, SENSEMOTIVE NEEDS BONUS
         GridPane questionnaire = FXMLLoader.load(getClass().getResource("loadRequest.fxml"));
         stage.setScene(new Scene(questionnaire));
         stage.setResizable(false);

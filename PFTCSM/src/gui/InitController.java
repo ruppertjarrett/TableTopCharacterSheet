@@ -21,9 +21,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import models.CharacterSheet;
 
 public class InitController implements Initializable {
 
+    public static CharacterSheet theSheet = new CharacterSheet();
+    
     @FXML
     private Button cont;
 
@@ -114,7 +117,7 @@ public class InitController implements Initializable {
         try {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("gui/GUI_Layout.fxml"));
         } catch (IOException e) {
-            System.out.println("File GUI_Layout.fxml not found.");
+            System.out.println("File GUI_Layout.fxml not found in gui package.");
             e.printStackTrace();
             return;
         }
