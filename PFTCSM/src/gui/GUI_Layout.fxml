@@ -318,12 +318,12 @@
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
                                                 </TextField>
-                                                <TextField fx:id="dexMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                <TextField fx:id="dexMod" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                    <GridPane.margin>
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
                                                 </TextField>
-                                                <TextField fx:id="strMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                <TextField fx:id="strMod" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                    <GridPane.margin>
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
@@ -358,7 +358,7 @@
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
                                                 </TextField>
-                                                <TextField fx:id="conMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                <TextField fx:id="conMod" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                    <GridPane.margin>
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
@@ -373,7 +373,7 @@
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
                                                 </TextField>
-                                                <TextField fx:id="intMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                <TextField fx:id="intMod" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                                    <GridPane.margin>
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
@@ -388,7 +388,7 @@
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
                                                 </TextField>
-                                                <TextField fx:id="wisMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                <TextField fx:id="wisMod" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                                    <GridPane.margin>
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
@@ -403,7 +403,7 @@
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
                                                 </TextField>
-                                                <TextField fx:id="chaMod" alignment="CENTER" editable="false" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                                <TextField fx:id="chaMod" alignment="CENTER" prefHeight="40.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                                    <GridPane.margin>
                                                       <Insets left="25.0" right="25.0" />
                                                    </GridPane.margin>
