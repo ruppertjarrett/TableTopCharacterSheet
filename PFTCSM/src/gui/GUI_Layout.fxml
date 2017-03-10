@@ -18,25 +18,13 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UIController">
-   <right>
-      <VBox prefHeight="600.0" prefWidth="112.0" BorderPane.alignment="CENTER">
-<padding>
-<Insets bottom="10" left="10" right="10" top="10" />
-</padding>
-         <children>
-            <Button fx:id="saveCurrent" alignment="CENTER" mnemonicParsing="false" prefHeight="23.0" prefWidth="91.0" text="Save" textAlignment="CENTER">
-            </Button>
-         </children>
-      </VBox>
-   </right>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TabPane prefHeight="606.0" prefWidth="814.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane prefHeight="610.0" prefWidth="814.0" tabClosingPolicy="UNAVAILABLE">
                <tabs>
                   <Tab text="Stats">
                      <content>
@@ -50,7 +38,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <ImageView fitHeight="574.0" fitWidth="814.0" pickOnBounds="true">
+                                    <ImageView fitHeight="610.0" fitWidth="814.0" pickOnBounds="true">
                                        <image>
                                           <Image url="@papyrus.jpg" />
                                        </image>
@@ -1387,7 +1375,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <ImageView fitHeight="574.0" fitWidth="814.0" pickOnBounds="true">
+                                    <ImageView fitHeight="610.0" fitWidth="814.0" pickOnBounds="true">
                                        <image>
                                           <Image url="@papyrus.jpg" />
                                        </image>
@@ -1523,7 +1511,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="800.0">
                            <children>
-                              <ScrollPane hbarPolicy="NEVER" prefHeight="574.0" prefWidth="814.0" vbarPolicy="ALWAYS" vvalue="0.99">
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="574.0" prefWidth="814.0" vbarPolicy="ALWAYS">
                                  <content>
                                     <GridPane prefHeight="1500.0" prefWidth="799.0">
                                        <columnConstraints>
@@ -1533,7 +1521,7 @@
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                        </rowConstraints>
                                        <children>
-                                          <ImageView fitHeight="1500.0" fitWidth="799.0" pickOnBounds="true">
+                                          <ImageView fitHeight="1610.0" fitWidth="814.0" pickOnBounds="true">
                                              <image>
                                                 <Image url="@papyrus.jpg" />
                                              </image>
@@ -3731,7 +3719,7 @@
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                        </rowConstraints>
                                        <children>
-                                          <ImageView fitHeight="1500.0" fitWidth="799.0" pickOnBounds="true">
+                                          <ImageView fitHeight="1500.0" fitWidth="814.0" pickOnBounds="true">
                                              <image>
                                                 <Image url="@papyrus.jpg" />
                                              </image>
@@ -4190,4 +4178,29 @@
          </children>
       </AnchorPane>
    </center>
+   <right>
+      <GridPane prefHeight="610.0" prefWidth="113.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="610.0" fitWidth="120.0" pickOnBounds="true">
+               <image>
+                  <Image url="@papyrus.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="saveCurrent" alignment="CENTER" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" text="Save" textAlignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </right>
 </BorderPane>
