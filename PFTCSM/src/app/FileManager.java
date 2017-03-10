@@ -987,7 +987,7 @@ public class FileManager {
 		return sheet;
 	}
 
-	public static boolean writeToFile(String filePath, String characterName, CharacterSheet sheet) {
+	public static boolean writeToFile(String filePath, CharacterSheet sheet) {
 		String output = sheet.toString();
 
 		if (filePath == null || output == null) {
@@ -995,7 +995,7 @@ public class FileManager {
 		}
 
 		try {
-			Files.write(Paths.get(filePath, "\\", characterName + ".txt"), output.getBytes());
+			Files.write(Paths.get(filePath, "\\", sheet.getName() + ".txt"), output.getBytes());
 		} catch (IOException e) {
 			e.printStackTrace();
 			return false;
