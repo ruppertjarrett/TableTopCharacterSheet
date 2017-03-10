@@ -11,13 +11,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class GuiMain extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        BorderPane questionnaire = FXMLLoader.load(getClass().getResource("GUI_Layout.fxml"));
+        GridPane questionnaire = FXMLLoader.load(getClass().getResource("loadRequest.fxml"));
         stage.setScene(new Scene(questionnaire));
         stage.setResizable(false);
         stage.setTitle("PathFinder Character Sheet Manager");
