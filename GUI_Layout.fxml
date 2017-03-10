@@ -3704,7 +3704,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ScrollPane hbarPolicy="NEVER" layoutX="390.0" layoutY="198.0" maxHeight="-Infinity" prefHeight="1500.0" prefWidth="814.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="390.0" layoutY="198.0" maxHeight="-Infinity" prefHeight="1500.0" prefWidth="814.0" vbarPolicy="ALWAYS" vvalue="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1500.0" prefWidth="799.0">
                                 <columnConstraints>
@@ -3804,57 +3804,57 @@
                                                 </Label>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newSpellLike" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel9" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel8" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel7" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel6" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel5" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel4" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel3" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                                                    <children>
-                                                      <Button alignment="CENTER" mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel0" alignment="CENTER" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel1" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                                 <FlowPane prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                    <children>
-                                                      <Button mnemonicParsing="false" text="+" />
+                                                      <Button fx:id="newLevel2" mnemonicParsing="false" text="+" />
                                                    </children>
                                                 </FlowPane>
                                              </children>
