@@ -19,56 +19,6 @@ public class FileGenerator {
 	}
 	
 	public static HashMap<NameOfSkill, Skill> randomizeSkills(Class chaClass, Race race, int level, CharacterSheet sheet) { 
-//	    BARBARIAN, 
-//	    The barbarians class skills are Acrobatics (Dex), Climb
-//	    (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), 
-//	    Knowledge (nature) (Int), Perception (Wis), Ride (Dex), 
-//	    Survival (Wis), and Swim (Str). 
-//	    Skill Ranks per Level: 4 + Int modifier. 
-	     
-//	    BARD, 
-//		The bard’s class skills are Acrobatics (Dex), Appraise
-//		(Int), Bluff (Cha), Climb (Str), Craft (Int), Diplomacy (Cha),
-//		Disguise (Cha), Escape Artist (Dex), Intimidate (Cha),
-//		Knowledge (all) (Int), Linguistics (Int), Perception (Wis),
-//		Perform (Cha), Profession (Wis), Sense Motive (Wis),
-//		Sleight of Hand (Dex), Spellcraft (Int), Stealth (Dex), and
-//		Use Magic Device (Cha).
-//		Skill Ranks per Level: 6 + Int modifier.
-		
-//	    CLERIC,
-//		The cleric’s class skills are Appraise (Int), Craft (Int),
-//		Diplomacy (Cha), Heal (Wis), Knowledge (arcana) (Int),
-//		Knowledge (history) (Int), Knowledge (nobility) (Int),
-//		Knowledge (planes) (Int), Knowledge (religion) (Int),
-//		Linguistics (Int), Profession (Wis), Sense Motive (Wis), and
-//		Spellcraft (Int).
-//		Skill Ranks per Level: 2 + Int modifier.
-		
-//	    DRUID,
-		
-		
-//	    FIGHTER, 
-		
-		
-//	    MONK,
-		
-		
-//	    PALADIN,
-		
-		
-//	    RANGER,
-		
-		
-//	    ROGUE,
-		
-		
-//	    SORCERER,
-		
-		
-//	    WIZARD
-		
-	     
 	    HashMap<NameOfSkill, Skill> skills = new HashMap<>(); 
 	     
 	    if (chaClass == Class.BARBARIAN) {
@@ -151,6 +101,12 @@ public class FileGenerator {
 	    	if (rank10 > 0) {
 	    		miscMod10 = 3;
 	    	}
+	    	
+//		    The barbarians class skills are Acrobatics (Dex), Climb
+//		    (Str), Craft (Int), Handle Animal (Cha), Intimidate (Cha), 
+//		    Knowledge (nature) (Int), Perception (Wis), Ride (Dex), 
+//		    Survival (Wis), and Swim (Str). 
+//		    Skill Ranks per Level: 4 + Int modifier. 
 	    	
 	    	Skill acrobatics = new Skill(NameOfSkill.ACROBATICS, SkillTiedAbility.DEX, rank1, miscMod1);
 	    	skills.put(acrobatics.getName(), acrobatics);
@@ -388,6 +344,15 @@ public class FileGenerator {
 	    		miscMod28 = 3;
 	    	}
 	    	
+//			The bard’s class skills are Acrobatics (Dex), Appraise
+//			(Int), Bluff (Cha), Climb (Str), Craft (Int), Diplomacy (Cha),
+//			Disguise (Cha), Escape Artist (Dex), Intimidate (Cha),
+//			Knowledge (all) (Int), Linguistics (Int), Perception (Wis),
+//			Perform (Cha), Profession (Wis), Sense Motive (Wis),
+//			Sleight of Hand (Dex), Spellcraft (Int), Stealth (Dex), and
+//			Use Magic Device (Cha).
+//			Skill Ranks per Level: 6 + Int modifier.
+	    	
 	    	Skill acrobatics = new Skill(NameOfSkill.ACROBATICS, SkillTiedAbility.DEX, rank1, miscMod1);
 	    	skills.put(acrobatics.getName(), acrobatics);
 	    	
@@ -488,7 +453,7 @@ public class FileGenerator {
 	    	int rank13 = 0;
 	    	
 	    	for(int i = 1; i <= rank; i++){
-	    		int rand = (rnd.nextInt(28)+1);
+	    		int rand = (rnd.nextInt(13)+1);
 	    		
 	    		if (rand == 1) {
 	    			rank1++;
@@ -596,7 +561,1243 @@ public class FileGenerator {
 	    	Skill knowledgeA = new Skill(NameOfSkill.KNOWLEDGE_A, SkillTiedAbility.INT, rank5, miscMod5);
 	    	skills.put(knowledgeA.getName(), knowledgeA);
 	    	
+	    	Skill knowledgeH = new Skill(NameOfSkill.KNOWLEDGE_H, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeH.getName(), knowledgeH);
 	    	
+	    	Skill knowledgeNO = new Skill(NameOfSkill.KNOWLEDGE_NO, SkillTiedAbility.INT, rank7, miscMod7);
+	    	skills.put(knowledgeNO.getName(), knowledgeNO);
+	    	
+	    	Skill knowledgeP = new Skill(NameOfSkill.KNOWLEDGE_P, SkillTiedAbility.INT, rank8, miscMod8);
+	    	skills.put(knowledgeP.getName(), knowledgeP);
+	    	
+	    	Skill knowledgeR = new Skill(NameOfSkill.KNOWLEDGE_R, SkillTiedAbility.INT, rank9, miscMod9);
+	    	skills.put(knowledgeR.getName(), knowledgeR);
+	    	
+	    	Skill linguistics = new Skill(NameOfSkill.LINGUISTICS, SkillTiedAbility.INT, rank10, miscMod10);
+	    	skills.put(linguistics.getName(), linguistics);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank11, miscMod11);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill senseMotive = new Skill(NameOfSkill.SENSE_MOTIVE, SkillTiedAbility.WIS, rank12, miscMod12);
+	    	skills.put(senseMotive.getName(), senseMotive);
+	    	
+	    	Skill spellcraft = new Skill(NameOfSkill.SPELLCRAFT, SkillTiedAbility.INT, rank13, miscMod13);
+	    	skills.put(spellcraft.getName(), spellcraft);
+	    } else if (chaClass == Class.DRUID) {
+	    	int rank = (4+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	int rank10 = 0;
+	    	int rank11 = 0;
+	    	int rank12 = 0;
+	    	int rank13 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(13)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		} else if (rand == 10) {
+	    			rank10++;
+	    		} else if (rand == 11) {
+	    			rank11++;
+	    		} else if (rand == 12) {
+	    			rank12++;
+	    		} else if (rand == 13) {
+	    			rank13++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	int miscMod10 = 0;
+	    	int miscMod11 = 0;
+	    	int miscMod12 = 0;
+	    	int miscMod13 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	if (rank10 > 0) {
+	    		miscMod10 = 3;
+	    	}
+	    	if (rank11 > 0) {
+	    		miscMod11 = 3;
+	    	}
+	    	if (rank12 > 0) {
+	    		miscMod12 = 3;
+	    	}
+	    	if (rank13 > 0) {
+	    		miscMod13 = 3;
+	    	}
+	    	
+//	    	The druid’s class skills are Climb (Str), Craft (Int), Fly (Dex),
+//	    	Handle Animal (Cha), Heal (Wis), Knowledge (geography) (Int),
+//	    	Knowledge (nature) (Int), Perception (Wis), Profession (Wis),
+//	    	Ride (Dex), Spellcraft (Int), Survival (Wis), and Swim (Str).
+//	    	Skill Ranks per Level: 4 + Int modifier
+	    	
+	    	Skill climb = new Skill(NameOfSkill.CLIMB, SkillTiedAbility.STR, rank1, miscMod1);
+	    	skills.put(climb.getName(), climb);
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank2, miscMod2);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill fly = new Skill(NameOfSkill.FLY, SkillTiedAbility.DEX, rank3, miscMod3);
+	    	skills.put(fly.getName(), fly);
+	    	
+	    	Skill handleAnimal = new Skill(NameOfSkill.HANDLE_ANIMAL, SkillTiedAbility.CHA, rank4, miscMod4);
+	    	skills.put(handleAnimal.getName(), handleAnimal);
+	    	
+	    	Skill heal = new Skill(NameOfSkill.HEAL, SkillTiedAbility.WIS, rank5, miscMod5);
+	    	skills.put(heal.getName(), heal);
+	    	
+	    	Skill knowledgeG = new Skill(NameOfSkill.KNOWLEDGE_G, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeG.getName(), knowledgeG);
+	    	
+	    	Skill knowledgeNA = new Skill(NameOfSkill.KNOWLEDGE_NA, SkillTiedAbility.INT, rank7, miscMod7);
+	    	skills.put(knowledgeNA.getName(), knowledgeNA);
+	    	
+	    	Skill perception = new Skill(NameOfSkill.PERCEPTION, SkillTiedAbility.WIS, rank8, miscMod8);
+	    	skills.put(perception.getName(), perception);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank9, miscMod9);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill ride = new Skill(NameOfSkill.RIDE, SkillTiedAbility.DEX, rank10, miscMod10);
+	    	skills.put(ride.getName(), ride);
+	    	
+	    	Skill spellcraft = new Skill(NameOfSkill.SPELLCRAFT, SkillTiedAbility.INT, rank11, miscMod11);
+	    	skills.put(spellcraft.getName(), spellcraft);
+	    	
+	    	Skill survival = new Skill(NameOfSkill.SURVIVAL, SkillTiedAbility.WIS, rank12, miscMod12);
+	    	skills.put(survival.getName(), survival);
+	    	
+	    	Skill swim = new Skill(NameOfSkill.SWIM, SkillTiedAbility.STR, rank13, miscMod13);
+	    	skills.put(swim.getName(), swim);
+	    } else if (chaClass == Class.FIGHTER) {
+	    	int rank = (4+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	int rank10 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(10)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		} else if (rand == 10) {
+	    			rank10++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	int miscMod10 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	if (rank10 > 0) {
+	    		miscMod10 = 3;
+	    	}
+	    	
+//	    	The fighter’s class skills are Climb (Str), Craft (Int),
+//	    	Handle Animal (Cha), Intimidate (Cha), Knowledge
+//	    	(dungeoneering) (Int), Knowledge (engineering) (Int),
+//	    	Profession (Wis), Ride (Dex), Survival (Wis), and Swim (Str).
+//	    	Skill Ranks per Level: 2 + Int modifier.
+	    	
+	    	Skill climb = new Skill(NameOfSkill.CLIMB, SkillTiedAbility.STR, rank1, miscMod1);
+	    	skills.put(climb.getName(), climb);
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank2, miscMod2);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill handleAnimal = new Skill(NameOfSkill.HANDLE_ANIMAL, SkillTiedAbility.CHA, rank3, miscMod3);
+	    	skills.put(handleAnimal.getName(), handleAnimal);
+	    	
+	    	Skill intimidate = new Skill(NameOfSkill.INTIMIDATE, SkillTiedAbility.CHA, rank4, miscMod4);
+	    	skills.put(intimidate.getName(), intimidate);
+	    	
+	    	Skill knowledgeD = new Skill(NameOfSkill.KNOWLEDGE_D, SkillTiedAbility.INT, rank5, miscMod5);
+	    	skills.put(knowledgeD.getName(), knowledgeD);
+	    	
+	    	Skill knowledgeE = new Skill(NameOfSkill.KNOWLEDGE_E, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeE.getName(), knowledgeE);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank7, miscMod7);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill ride = new Skill(NameOfSkill.RIDE, SkillTiedAbility.DEX, rank8, miscMod8);
+	    	skills.put(ride.getName(), ride);
+	    	
+	    	Skill survival = new Skill(NameOfSkill.SURVIVAL, SkillTiedAbility.WIS, rank9, miscMod9);
+	    	skills.put(survival.getName(), survival);
+	    	
+	    	Skill swim = new Skill(NameOfSkill.SWIM, SkillTiedAbility.STR, rank10, miscMod10);
+	    	skills.put(swim.getName(), swim);
+	    } else if (chaClass == Class.MONK) {
+	    	int rank = (4+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	int rank10 = 0;
+	    	int rank11 = 0;
+	    	int rank12 = 0;
+	    	int rank13 = 0;
+	    	int rank14 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(14)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		} else if (rand == 10) {
+	    			rank10++;
+	    		} else if (rand == 11) {
+	    			rank11++;
+	    		} else if (rand == 12) {
+	    			rank12++;
+	    		} else if (rand == 13) {
+	    			rank13++;
+	    		} else if (rand == 14) {
+	    			rank14++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	int miscMod10 = 0;
+	    	int miscMod11 = 0;
+	    	int miscMod12 = 0;
+	    	int miscMod13 = 0;
+	    	int miscMod14 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	if (rank10 > 0) {
+	    		miscMod10 = 3;
+	    	}
+	    	if (rank11 > 0) {
+	    		miscMod11 = 3;
+	    	}
+	    	if (rank12 > 0) {
+	    		miscMod12 = 3;
+	    	}
+	    	if (rank13 > 0) {
+	    		miscMod13 = 3;
+	    	}
+	    	if (rank14 > 0) {
+	    		miscMod14 = 3;
+	    	}
+	    	
+//	    	The monk’s class skills are Acrobatics (Dex), Climb
+//	    	(Str), Craft (Int), Escape Artist (Dex), Intimidate (Cha),
+//	    	Knowledge (history) (Int), Knowledge (religion) (Int),
+//	    	Perception (Wis), Perform (Cha), Profession (Wis), Ride
+//	    	(Dex), Sense Motive (Wis), Stealth (Dex), and Swim (Str).
+//	    	Skill Ranks per Level: 4 + Int modifier.
+	    	
+	    	Skill acrobatics = new Skill(NameOfSkill.ACROBATICS, SkillTiedAbility.DEX, rank1, miscMod1);
+	    	skills.put(acrobatics.getName(), acrobatics);
+	    	
+	    	Skill climb = new Skill(NameOfSkill.CLIMB, SkillTiedAbility.STR, rank2, miscMod2);
+	    	skills.put(climb.getName(), climb);
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank3, miscMod3);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill escapeArtist = new Skill(NameOfSkill.ESCAPE_ARTIST, SkillTiedAbility.DEX, rank4, miscMod4);
+	    	skills.put(escapeArtist.getName(), escapeArtist);
+	    	
+	    	Skill intimidate = new Skill(NameOfSkill.INTIMIDATE, SkillTiedAbility.CHA, rank5, miscMod5);
+	    	skills.put(intimidate.getName(), intimidate);
+	    	
+	    	Skill knowledgeH = new Skill(NameOfSkill.KNOWLEDGE_H, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeH.getName(), knowledgeH);
+	    	
+	    	Skill knowledgeR = new Skill(NameOfSkill.KNOWLEDGE_R, SkillTiedAbility.INT, rank7, miscMod7);
+	    	skills.put(knowledgeR.getName(), knowledgeR);
+	    	
+	    	Skill perception = new Skill(NameOfSkill.PERCEPTION, SkillTiedAbility.WIS, rank8, miscMod8);
+	    	skills.put(perception.getName(), perception);
+	    	
+	    	Skill perform = new Skill(NameOfSkill.PERFORM1, SkillTiedAbility.CHA, rank9, miscMod9);
+	    	skills.put(perform.getName(), perform);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank10, miscMod10);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill ride = new Skill(NameOfSkill.RIDE, SkillTiedAbility.DEX, rank11, miscMod11);
+	    	skills.put(ride.getName(), ride);
+	    	
+	    	Skill senseMotive = new Skill(NameOfSkill.SENSE_MOTIVE, SkillTiedAbility.WIS, rank12, miscMod12);
+	    	skills.put(senseMotive.getName(), senseMotive);
+	    	
+	    	Skill stealth = new Skill(NameOfSkill.STEALTH, SkillTiedAbility.DEX, rank13, miscMod13);
+	    	skills.put(stealth.getName(), stealth);
+	    	
+	    	Skill swim = new Skill(NameOfSkill.SWIM, SkillTiedAbility.STR, rank14, miscMod14);
+	    	skills.put(swim.getName(), swim);
+	    } else if (chaClass == Class.PALADIN) {
+	    	int rank = (2+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	int rank10 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(10)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		} else if (rand == 10) {
+	    			rank10++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	int miscMod10 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	if (rank10 > 0) {
+	    		miscMod10 = 3;
+	    	}
+	    	
+//	    	The paladin’s class skills are Craft (Int), Diplomacy (Cha),
+//	    	Handle Animal (Cha), Heal (Wis), Knowledge (nobility)
+//	    	(Int), Knowledge (religion) (Int), Profession (Wis), Ride
+//	    	(Dex), Sense Motive (Wis), and Spellcraft (Int).
+//	    	Skill Ranks per Level: 2 + Int modifier.
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank1, miscMod1);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill diplomacy = new Skill(NameOfSkill.DIPLOMACY, SkillTiedAbility.CHA, rank2, miscMod2);
+	    	skills.put(diplomacy.getName(), diplomacy);
+	    	
+	    	Skill handleAnimal = new Skill(NameOfSkill.HANDLE_ANIMAL, SkillTiedAbility.CHA, rank3, miscMod3);
+	    	skills.put(handleAnimal.getName(), handleAnimal);
+	    	
+	    	Skill heal = new Skill(NameOfSkill.HEAL, SkillTiedAbility.WIS, rank4, miscMod4);
+	    	skills.put(heal.getName(), heal);
+	    	
+	    	Skill knowledgeNO = new Skill(NameOfSkill.KNOWLEDGE_NO, SkillTiedAbility.INT, rank5, miscMod5);
+	    	skills.put(knowledgeNO.getName(), knowledgeNO);
+	    	
+	    	Skill knowledgeR = new Skill(NameOfSkill.KNOWLEDGE_R, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeR.getName(), knowledgeR);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank7, miscMod7);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill ride = new Skill(NameOfSkill.RIDE, SkillTiedAbility.DEX, rank8, miscMod8);
+	    	skills.put(ride.getName(), ride);
+	    	
+	    	Skill senseMotive = new Skill(NameOfSkill.SENSE_MOTIVE, SkillTiedAbility.WIS, rank9, miscMod9);
+	    	skills.put(senseMotive.getName(), senseMotive);
+	    	
+	    	Skill spellcraft = new Skill(NameOfSkill.SPELLCRAFT, SkillTiedAbility.INT, rank10, miscMod10);
+	    	skills.put(spellcraft.getName(), spellcraft);
+	    } else if (chaClass == Class.RANGER) {
+	    	int rank = (6+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	int rank10 = 0;
+	    	int rank11 = 0;
+	    	int rank12 = 0;
+	    	int rank13 = 0;
+	    	int rank14 = 0;
+	    	int rank15 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(15)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		} else if (rand == 10) {
+	    			rank10++;
+	    		} else if (rand == 11) {
+	    			rank11++;
+	    		} else if (rand == 12) {
+	    			rank12++;
+	    		} else if (rand == 13) {
+	    			rank13++;
+	    		} else if (rand == 14) {
+	    			rank14++;
+	    		} else if (rand == 15) {
+	    			rank15++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	int miscMod10 = 0;
+	    	int miscMod11 = 0;
+	    	int miscMod12 = 0;
+	    	int miscMod13 = 0;
+	    	int miscMod14 = 0;
+	    	int miscMod15 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	if (rank10 > 0) {
+	    		miscMod10 = 3;
+	    	}
+	    	if (rank11 > 0) {
+	    		miscMod11 = 3;
+	    	}
+	    	if (rank12 > 0) {
+	    		miscMod12 = 3;
+	    	}
+	    	if (rank13 > 0) {
+	    		miscMod13 = 3;
+	    	}
+	    	if (rank14 > 0) {
+	    		miscMod14 = 3;
+	    	}
+	    	if (rank15 > 0) {
+	    		miscMod15 = 3;
+	    	}
+	    	
+	    	
+//	    	The ranger’s class skills are Climb (Str), Craft (Int), Handle
+//	    	Animal (Cha), Heal (Wis), Intimidate (Cha), Knowledge
+//	    	(dungeoneering) (Int), Knowledge (geography) (Int),
+//	    	Knowledge (nature) (Int), Perception (Wis), Profession
+//	    	(Wis), Ride (Dex), Spellcraft (Int), Stealth (Dex), Survival
+//	    	(Wis), and Swim (Str).
+//	    	Skill Ranks per Level: 6 + Int modifier.
+	    	
+	    	Skill climb = new Skill(NameOfSkill.CLIMB, SkillTiedAbility.STR, rank1, miscMod1);
+	    	skills.put(climb.getName(), climb);
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank2, miscMod2);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill handleAnimal = new Skill(NameOfSkill.HANDLE_ANIMAL, SkillTiedAbility.CHA, rank3, miscMod3);
+	    	skills.put(handleAnimal.getName(), handleAnimal);
+	    	
+	    	Skill heal = new Skill(NameOfSkill.HEAL, SkillTiedAbility.WIS, rank4, miscMod4);
+	    	skills.put(heal.getName(), heal);
+	    	
+	    	Skill intimidate = new Skill(NameOfSkill.INTIMIDATE, SkillTiedAbility.CHA, rank5, miscMod5);
+	    	skills.put(intimidate.getName(), intimidate);
+	    	
+	    	Skill knowledgeD = new Skill(NameOfSkill.KNOWLEDGE_D, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeD.getName(), knowledgeD);
+	    	
+	    	Skill knowledgeG = new Skill(NameOfSkill.KNOWLEDGE_G, SkillTiedAbility.INT, rank7, miscMod7);
+	    	skills.put(knowledgeG.getName(), knowledgeG);
+	    	
+	    	Skill knowledgeNA = new Skill(NameOfSkill.KNOWLEDGE_NA, SkillTiedAbility.INT, rank8, miscMod8);
+	    	skills.put(knowledgeNA.getName(), knowledgeNA);
+	    	
+	    	Skill perception = new Skill(NameOfSkill.PERCEPTION, SkillTiedAbility.WIS, rank9, miscMod9);
+	    	skills.put(perception.getName(), perception);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank10, miscMod10);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill ride = new Skill(NameOfSkill.RIDE, SkillTiedAbility.DEX, rank11, miscMod11);
+	    	skills.put(ride.getName(), ride);
+	    	
+	    	Skill spellcraft = new Skill(NameOfSkill.SPELLCRAFT, SkillTiedAbility.INT, rank12, miscMod12);
+	    	skills.put(spellcraft.getName(), spellcraft);
+	    	
+	    	Skill stealth = new Skill(NameOfSkill.STEALTH, SkillTiedAbility.DEX, rank13, miscMod13);
+	    	skills.put(stealth.getName(), stealth);
+	    	
+	    	Skill survival = new Skill(NameOfSkill.SURVIVAL, SkillTiedAbility.WIS, rank14, miscMod14);
+	    	skills.put(survival.getName(), survival);
+	    	
+	    	Skill swim = new Skill(NameOfSkill.SWIM, SkillTiedAbility.STR, rank15, miscMod15);
+	    	skills.put(swim.getName(), swim);
+	    } else if (chaClass == Class.ROGUE) {
+	    	int rank = (8+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	int rank10 = 0;
+	    	int rank11 = 0;
+	    	int rank12 = 0;
+	    	int rank13 = 0;
+	    	int rank14 = 0;
+	    	int rank15 = 0;
+	    	int rank16 = 0;
+	    	int rank17 = 0;
+	    	int rank18 = 0;
+	    	int rank19 = 0;
+	    	int rank20 = 0;
+	    	int rank21 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(21)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		} else if (rand == 10) {
+	    			rank10++;
+	    		} else if (rand == 11) {
+	    			rank11++;
+	    		} else if (rand == 12) {
+	    			rank12++;
+	    		} else if (rand == 13) {
+	    			rank13++;
+	    		} else if (rand == 14) {
+	    			rank14++;
+	    		} else if (rand == 15) {
+	    			rank15++;
+	    		} else if (rand == 16) {
+	    			rank16++;
+	    		} else if (rand == 17) {
+	    			rank17++;
+	    		} else if (rand == 18) {
+	    			rank18++;
+	    		} else if (rand == 19) {
+	    			rank19++;
+	    		} else if (rand == 20) {
+	    			rank20++;
+	    		} else if (rand == 21) {
+	    			rank21++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	int miscMod10 = 0;
+	    	int miscMod11 = 0;
+	    	int miscMod12 = 0;
+	    	int miscMod13 = 0;
+	    	int miscMod14 = 0;
+	    	int miscMod15 = 0;
+	    	int miscMod16 = 0;
+	    	int miscMod17 = 0;
+	    	int miscMod18 = 0;
+	    	int miscMod19 = 0;
+	    	int miscMod20 = 0;
+	    	int miscMod21 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	if (rank10 > 0) {
+	    		miscMod10 = 3;
+	    	}
+	    	if (rank11 > 0) {
+	    		miscMod11 = 3;
+	    	}
+	    	if (rank12 > 0) {
+	    		miscMod12 = 3;
+	    	}
+	    	if (rank13 > 0) {
+	    		miscMod13 = 3;
+	    	}
+	    	if (rank14 > 0) {
+	    		miscMod14 = 3;
+	    	}
+	    	if (rank15 > 0) {
+	    		miscMod15 = 3;
+	    	}
+	    	if (rank16 > 0) {
+	    		miscMod16 = 3;
+	    	}
+	    	if (rank17 > 0) {
+	    		miscMod17 = 3;
+	    	}
+	    	if (rank18 > 0) {
+	    		miscMod18 = 3;
+	    	}
+	    	if (rank19 > 0) {
+	    		miscMod19 = 3;
+	    	}
+	    	if (rank20 > 0) {
+	    		miscMod20 = 3;
+	    	}
+	    	if (rank21 > 0) {
+	    		miscMod21 = 3;
+	    	}
+	    	
+//	    	The rogue’s class skills are Acrobatics (Dex), Appraise
+//	    	(Int), Bluff (Cha), Climb (Str), Craft (Int), Diplomacy
+//	    	(Cha), Disable Device (Dex), Disguise (Cha), Escape Artist
+//	    	(Dex), Intimidate (Cha), Knowledge (dungeoneering)
+//	    	(Int), Knowledge (local) (Int), Linguistics (Int), Perception
+//	    	(Wis), Perform (Cha), Profession (Wis), Sense Motive (Wis),
+//	    	Sleight of Hand (Dex), Stealth (Dex), Swim (Str), and Use
+//	    	Magic Device (Cha).
+//	    	Skill Ranks per Level: 8 + Int modifier.
+	    	
+	    	Skill acrobatics = new Skill(NameOfSkill.ACROBATICS, SkillTiedAbility.DEX, rank1, miscMod1);
+	    	skills.put(acrobatics.getName(), acrobatics);
+	    	
+	    	Skill appraise = new Skill(NameOfSkill.APPRAISE, SkillTiedAbility.INT, rank2, miscMod2);
+	    	skills.put(appraise.getName(), appraise);
+	    	
+	    	Skill bluff = new Skill(NameOfSkill.BLUFF, SkillTiedAbility.CHA, rank3, miscMod3);
+	    	skills.put(bluff.getName(), bluff);
+	    	
+	    	Skill climb = new Skill(NameOfSkill.CLIMB, SkillTiedAbility.STR, rank4, miscMod4);
+	    	skills.put(climb.getName(), climb);
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank5, miscMod5);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill diplomacy = new Skill(NameOfSkill.DIPLOMACY, SkillTiedAbility.CHA, rank6, miscMod6);
+	    	skills.put(diplomacy.getName(), diplomacy);
+	    	
+	    	Skill disableDevice = new Skill(NameOfSkill.DISABLE_DEVICE, SkillTiedAbility.DEX, rank7, miscMod7);
+	    	skills.put(disableDevice.getName(), disableDevice);
+	    	
+	    	Skill disguise = new Skill(NameOfSkill.DISGUISE, SkillTiedAbility.CHA, rank8, miscMod8);
+	    	skills.put(disguise.getName(), disguise);
+	    	
+	    	Skill escapeArtist = new Skill(NameOfSkill.ESCAPE_ARTIST, SkillTiedAbility.DEX, rank9, miscMod9);
+	    	skills.put(escapeArtist.getName(), escapeArtist);
+	    	
+	    	Skill intimidate = new Skill(NameOfSkill.INTIMIDATE, SkillTiedAbility.CHA, rank10, miscMod10);
+	    	skills.put(intimidate.getName(), intimidate);
+	    	
+	    	Skill knowledgeD = new Skill(NameOfSkill.KNOWLEDGE_D, SkillTiedAbility.INT, rank11, miscMod11);
+	    	skills.put(knowledgeD.getName(), knowledgeD);
+	    	
+	    	Skill knowledgeL = new Skill(NameOfSkill.KNOWLEDGE_L, SkillTiedAbility.INT, rank12, miscMod12);
+	    	skills.put(knowledgeL.getName(), knowledgeL);
+	    	
+	    	Skill linguistics = new Skill(NameOfSkill.LINGUISTICS, SkillTiedAbility.INT, rank13, miscMod13);
+	    	skills.put(linguistics.getName(), linguistics);
+	    	
+	    	Skill perception = new Skill(NameOfSkill.PERCEPTION, SkillTiedAbility.WIS, rank14, miscMod14);
+	    	skills.put(perception.getName(), perception);
+	    	
+	    	Skill perform = new Skill(NameOfSkill.PERFORM1, SkillTiedAbility.CHA, rank15, miscMod15);
+	    	skills.put(perform.getName(), perform);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank16, miscMod16);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill senseMotive = new Skill(NameOfSkill.SENSE_MOTIVE, SkillTiedAbility.WIS, rank17, miscMod17);
+	    	skills.put(senseMotive.getName(), senseMotive);
+	    	
+	    	Skill sleightOfHand = new Skill(NameOfSkill.SLEIGHT_OF_HAND, SkillTiedAbility.DEX, rank18, miscMod18);
+	    	skills.put(sleightOfHand.getName(), sleightOfHand);
+	    	
+	    	Skill stealth = new Skill(NameOfSkill.STEALTH, SkillTiedAbility.DEX, rank19, miscMod19);
+	    	skills.put(stealth.getName(), stealth);
+	    	
+	    	Skill swim = new Skill(NameOfSkill.SWIM, SkillTiedAbility.STR, rank20, miscMod20);
+	    	skills.put(swim.getName(), swim);
+	    	
+	    	Skill useMagicDevice = new Skill(NameOfSkill.USE_MAGIC_DEVICE, SkillTiedAbility.CHA, rank21, miscMod21);
+	    	skills.put(useMagicDevice.getName(), useMagicDevice);
+	    } else if (chaClass == Class.SORCERER) {
+	    	int rank = (2+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(9)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	
+//	    	The sorcerer’s class skills are Appraise (Int), Bluff (Cha), Craft
+//	    	(Int), Fly (Dex), Intimidate (Cha), Knowledge (arcana) (Int),
+//	    	Profession (Wis), Spellcraft (Int), and Use Magic Device (Cha).
+//	    	Skill Ranks per Level: 2 + Int modifier.
+	    	
+	    	Skill appraise = new Skill(NameOfSkill.APPRAISE, SkillTiedAbility.INT, rank1, miscMod1);
+	    	skills.put(appraise.getName(), appraise);
+	    	
+	    	Skill bluff = new Skill(NameOfSkill.BLUFF, SkillTiedAbility.CHA, rank2, miscMod2);
+	    	skills.put(bluff.getName(), bluff);
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank3, miscMod3);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill fly = new Skill(NameOfSkill.FLY, SkillTiedAbility.DEX, rank4, miscMod4);
+	    	skills.put(fly.getName(), fly);
+	    	
+	    	Skill intimidate = new Skill(NameOfSkill.INTIMIDATE, SkillTiedAbility.CHA, rank5, miscMod5);
+	    	skills.put(intimidate.getName(), intimidate);
+	    	
+	    	Skill knowledgeA = new Skill(NameOfSkill.KNOWLEDGE_A, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeA.getName(), knowledgeA);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank7, miscMod7);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill spellcraft = new Skill(NameOfSkill.SPELLCRAFT, SkillTiedAbility.INT, rank8, miscMod8);
+	    	skills.put(spellcraft.getName(), spellcraft);
+	    	
+	    	Skill useMagicDevice = new Skill(NameOfSkill.USE_MAGIC_DEVICE, SkillTiedAbility.CHA, rank9, miscMod9);
+	    	skills.put(useMagicDevice.getName(), useMagicDevice);
+	    } else if (chaClass == Class.WIZARD) {
+	    	int rank = (2+sheet.getIntMod())*level;
+	    	int rank1 = 0;
+	    	int rank2 = 0;
+	    	int rank3 = 0;
+	    	int rank4 = 0;
+	    	int rank5 = 0;
+	    	int rank6 = 0;
+	    	int rank7 = 0;
+	    	int rank8 = 0;
+	    	int rank9 = 0;
+	    	int rank10 = 0;
+	    	int rank11 = 0;
+	    	int rank12 = 0;
+	    	int rank13 = 0;
+	    	int rank14 = 0;
+	    	int rank15 = 0;
+	    	int rank16 = 0;
+	    	
+	    	for(int i = 1; i <= rank; i++){
+	    		int rand = (rnd.nextInt(16)+1);
+	    		
+	    		if (rand == 1) {
+	    			rank1++;
+	    		} else if (rand == 2) {
+	    			rank2++;
+	    		} else if (rand == 3) {
+	    			rank3++;
+	    		} else if (rand == 4) {
+	    			rank4++;
+	    		} else if (rand == 5) {
+	    			rank5++;
+	    		} else if (rand == 6) {
+	    			rank6++;
+	    		} else if (rand == 7) {
+	    			rank7++;
+	    		} else if (rand == 8) {
+	    			rank8++;
+	    		} else if (rand == 9) {
+	    			rank9++;
+	    		} else if (rand == 10) {
+	    			rank10++;
+	    		} else if (rand == 11) {
+	    			rank11++;
+	    		} else if (rand == 12) {
+	    			rank12++;
+	    		} else if (rand == 13) {
+	    			rank13++;
+	    		} else if (rand == 14) {
+	    			rank14++;
+	    		} else if (rand == 15) {
+	    			rank15++;
+	    		} else if (rand == 16) {
+	    			rank16++;
+	    		}
+	    	}
+	    	
+	    	int miscMod1 = 0;
+	    	int miscMod2 = 0;
+	    	int miscMod3 = 0;
+	    	int miscMod4 = 0;
+	    	int miscMod5 = 0;
+	    	int miscMod6 = 0;
+	    	int miscMod7 = 0;
+	    	int miscMod8 = 0;
+	    	int miscMod9 = 0;
+	    	int miscMod10 = 0;
+	    	int miscMod11 = 0;
+	    	int miscMod12 = 0;
+	    	int miscMod13 = 0;
+	    	int miscMod14 = 0;
+	    	int miscMod15 = 0;
+	    	int miscMod16 = 0;
+	    	
+	    	if (rank1 > 0) {
+	    		miscMod1 = 3;
+	    	}
+	    	if (rank2 > 0) {
+	    		miscMod2 = 3;
+	    	}
+	    	if (rank3 > 0) {
+	    		miscMod3 = 3;
+	    	}
+	    	if (rank4 > 0) {
+	    		miscMod4 = 3;
+	    	}
+	    	if (rank5 > 0) {
+	    		miscMod5 = 3;
+	    	}
+	    	if (rank6 > 0) {
+	    		miscMod6 = 3;
+	    	}
+	    	if (rank7 > 0) {
+	    		miscMod7 = 3;
+	    	}
+	    	if (rank8 > 0) {
+	    		miscMod8 = 3;
+	    	}
+	    	if (rank9 > 0) {
+	    		miscMod9 = 3;
+	    	}
+	    	if (rank10 > 0) {
+	    		miscMod10 = 3;
+	    	}
+	    	if (rank11 > 0) {
+	    		miscMod11 = 3;
+	    	}
+	    	if (rank12 > 0) {
+	    		miscMod12 = 3;
+	    	}
+	    	if (rank13 > 0) {
+	    		miscMod13 = 3;
+	    	}
+	    	if (rank14 > 0) {
+	    		miscMod14 = 3;
+	    	}
+	    	if (rank15 > 0) {
+	    		miscMod15 = 3;
+	    	}
+	    	if (rank16 > 0) {
+	    		miscMod16 = 3;
+	    	}
+	    	
+//	    	The wizard’s class skills are Appraise (Int), Craft (Int), Fly
+//	    	(Dex), Knowledge (all) (Int), Linguistics (Int), Profession
+//	    	(Wis), and Spellcraft (Int).
+//	    	Skill Ranks per Level: 2 + Int modifier
+	    	
+	    	Skill appraise = new Skill(NameOfSkill.APPRAISE, SkillTiedAbility.INT, rank1, miscMod1);
+	    	skills.put(appraise.getName(), appraise);
+	    	
+	    	Skill craft = new Skill(NameOfSkill.CRAFT1, SkillTiedAbility.INT, rank2, miscMod2);
+	    	skills.put(craft.getName(), craft);
+	    	
+	    	Skill fly = new Skill(NameOfSkill.FLY, SkillTiedAbility.DEX, rank3, miscMod3);
+	    	skills.put(fly.getName(), fly);
+	    	
+	    	Skill knowledgeA = new Skill(NameOfSkill.KNOWLEDGE_A, SkillTiedAbility.INT, rank4, miscMod4);
+	    	skills.put(knowledgeA.getName(), knowledgeA);
+	    	
+	    	Skill knowledgeD = new Skill(NameOfSkill.KNOWLEDGE_D, SkillTiedAbility.INT, rank5, miscMod5);
+	    	skills.put(knowledgeD.getName(), knowledgeD);
+	    	
+	    	Skill knowledgeE = new Skill(NameOfSkill.KNOWLEDGE_E, SkillTiedAbility.INT, rank6, miscMod6);
+	    	skills.put(knowledgeE.getName(), knowledgeE);
+	    	
+	    	Skill knowledgeG = new Skill(NameOfSkill.KNOWLEDGE_G, SkillTiedAbility.INT, rank7, miscMod7);
+	    	skills.put(knowledgeG.getName(), knowledgeG);
+	    	
+	    	Skill knowledgeH = new Skill(NameOfSkill.KNOWLEDGE_H, SkillTiedAbility.INT, rank8, miscMod8);
+	    	skills.put(knowledgeH.getName(), knowledgeH);
+	    	
+	    	Skill knowledgeL = new Skill(NameOfSkill.KNOWLEDGE_L, SkillTiedAbility.INT, rank9, miscMod9);
+	    	skills.put(knowledgeL.getName(), knowledgeL);
+	    	
+	    	Skill knowledgeNA = new Skill(NameOfSkill.KNOWLEDGE_NA, SkillTiedAbility.INT, rank10, miscMod10);
+	    	skills.put(knowledgeNA.getName(), knowledgeNA);
+	    	
+	    	Skill knowledgeNO = new Skill(NameOfSkill.KNOWLEDGE_NO, SkillTiedAbility.INT, rank11, miscMod11);
+	    	skills.put(knowledgeNO.getName(), knowledgeNO);
+	    	
+	    	Skill knowledgeP = new Skill(NameOfSkill.KNOWLEDGE_P, SkillTiedAbility.INT, rank12, miscMod12);
+	    	skills.put(knowledgeP.getName(), knowledgeP);
+	    	
+	    	Skill knowledgeR = new Skill(NameOfSkill.KNOWLEDGE_R, SkillTiedAbility.INT, rank13, miscMod13);
+	    	skills.put(knowledgeR.getName(), knowledgeR);
+	    	
+	    	Skill linguistics = new Skill(NameOfSkill.LINGUISTICS, SkillTiedAbility.INT, rank14, miscMod14);
+	    	skills.put(linguistics.getName(), linguistics);
+	    	
+	    	Skill profession = new Skill(NameOfSkill.PROFESSION1, SkillTiedAbility.WIS, rank15, miscMod15);
+	    	skills.put(profession.getName(), profession);
+	    	
+	    	Skill spellcraft = new Skill(NameOfSkill.SPELLCRAFT, SkillTiedAbility.INT, rank16, miscMod16);
+	    	skills.put(spellcraft.getName(), spellcraft);
 	    }
 	     
 	    return skills; 
