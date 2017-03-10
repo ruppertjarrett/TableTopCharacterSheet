@@ -25,8 +25,7 @@ import javafx.scene.image.Image;
 import models.CharacterSheet;
 
 public class InitController implements Initializable {
-
-    public static CharacterSheet theSheet = new CharacterSheet();
+    public static String workingDir;
 
     @FXML
     private Button cont;
@@ -108,6 +107,7 @@ public class InitController implements Initializable {
 
     private boolean goodToGo() {
         String thing = userDir.getText();
+        workingDir = thing;
         System.out.println("User put in: " + thing);
         File userTry = new File(thing);
         return userTry.exists();

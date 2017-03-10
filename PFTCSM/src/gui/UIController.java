@@ -1,5 +1,6 @@
 package gui;
 
+import app.FileManager;
 import enums.AbilityType;
 import enums.Alignment;
 import enums.Deity;
@@ -46,7 +47,7 @@ public class UIController implements Initializable {
 
     // Creation buttons
     @FXML
-    private Button newFeat, newSpecialAbility, newWeapon, newTrait, newACItem, newGear, newLevel0, newLevel1,
+    private Button newFeat, newSpecialAbility, newWeapon, newTrait, newACItem, newGear, newLevel0, newLevel1, saveCurrent,
             newLevel2, newLevel3, newLevel4, newLevel5, newLevel6, newLevel7, newLevel8, newLevel9, newSpellLike;
 
     // First tab, Stats, TextFields
@@ -101,6 +102,12 @@ public class UIController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("UIController initialized.");
+        saveCurrent.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e){
+                saveFile();
+            }
+        });
         ObservableList<String> choices = FXCollections.observableArrayList();
         for (enums.Class c : enums.Class.values()) {
             choices.add(c.toString());
@@ -741,12 +748,13 @@ public class UIController implements Initializable {
     }
 
     private void updateMods() {
-        intMod.setText(intBase.getText());
-        dexMod.setText(dexBase.getText());
-        wisMod.setText(wisBase.getText());
-        conMod.setText(conBase.getText());
-        strMod.setText(strBase.getText());
-        chaMod.setText(chaBase.getText());
+        String backup = "0";
+        intMod.setText("" + (int) (Math.floor(parse((intBase.getText() == null || "".equals(intBase.getText())) ? backup : intBase.getText()) - 10) / 2.0));
+        dexMod.setText("" + (int) (Math.floor(parse((dexBase.getText() == null || "".equals(dexBase.getText())) ? backup : dexBase.getText()) - 10) / 2.0));
+        wisMod.setText("" + (int) (Math.floor(parse((wisBase.getText() == null || "".equals(wisBase.getText())) ? backup : wisBase.getText()) - 10) / 2.0));
+        conMod.setText("" + (int) (Math.floor(parse((conBase.getText() == null || "".equals(conBase.getText())) ? backup : conBase.getText()) - 10) / 2.0));
+        strMod.setText("" + (int) (Math.floor(parse((strBase.getText() == null || "".equals(strBase.getText())) ? backup : strBase.getText()) - 10) / 2.0));
+        chaMod.setText("" + (int) (Math.floor(parse((chaBase.getText() == null || "".equals(chaBase.getText())) ? backup : chaBase.getText()) - 10) / 2.0));
     }
 
     private void updateSkillsMods() {
@@ -1026,6 +1034,10 @@ public class UIController implements Initializable {
 
     }
 
+    private void saveFile(){
+        FileManager.writeToFile(InitController.workingDir, characterName.getText(), theSheet);
+    }
+    
     /**
      * @param s String to be parsed to int
      * @return Returns 0 if parse was unsuccessful, int of string if successful
