@@ -7,6 +7,8 @@ import enums.Gender;
 import enums.Race;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,6 +34,8 @@ import lib.TryParseIntResult;
 import models.Ability;
 import models.Armor;
 import models.CharacterSheet;
+import models.Item;
+import models.Spell;
 import models.Weapon;
 
 public class UIController implements Initializable {
@@ -44,7 +48,8 @@ public class UIController implements Initializable {
 
     // Creation buttons
     @FXML
-    private Button newFeat, newSpecialAbility, newWeapon, newTrait, newACItem, newGear;
+    private Button newFeat, newSpecialAbility, newWeapon, newTrait, newACItem, newGear, newLevel0, newLevel1,
+            newLevel2, newLevel3, newLevel4, newLevel5, newLevel6, newLevel7, newLevel8, newLevel9, newSpellLike;
 
     // First tab, Stats, TextFields
     @FXML
@@ -88,6 +93,8 @@ public class UIController implements Initializable {
     @FXML
     private ComboBox charClass, race, alignment, deity, gender;
 
+    private Spell newSpell;
+
     public UIController() {
         System.out.println("UIController instantiated, creating and injecting JavaFX objects.");
         // Doing anything here will result in NullPointers, objects aren't fully injected yet
@@ -122,7 +129,7 @@ public class UIController implements Initializable {
         }
         gender.getItems().setAll(choices);
 
-        rootPane.setOnKeyReleased(new EventHandler<KeyEvent>() {
+        rootPane.setOnKeyPressed(new EventHandler<KeyEvent>() {
             public void handle(KeyEvent k) {
                 update();
             }
@@ -135,7 +142,6 @@ public class UIController implements Initializable {
             public void handle(ActionEvent e) {
                 Stage newF = new Stage();
 
-                FlowPane parent = (FlowPane) newFeat.getParent();
                 VBox base = new VBox();
 
                 TextField usrName = new TextField(), usrDesc = new TextField(), usrType = new TextField();
@@ -172,7 +178,9 @@ public class UIController implements Initializable {
                         newThing = new Ability(usrName.getText(), usrType.getText(), usrDesc.getText(), AbilityType.FEAT);
                         theSheet.getAbilities().add(newThing);
                         FlowPane thing = (FlowPane) newFeat.getParent();
-                        thing.getChildren().add(new Button(usrName.getText()));
+                        Button newOne = new Button(usrName.getText());
+
+                        thing.getChildren().add(newOne);
                         newF.close();
                     }
                 });
@@ -339,6 +347,7 @@ public class UIController implements Initializable {
                 choices.setSpacing(50);
                 choices.setAlignment(Pos.CENTER);
 
+                base.setPadding(new Insets(10, 20, 20, 20));
                 base.setSpacing(12);
                 base.setAlignment(Pos.CENTER);
 
@@ -370,52 +379,8 @@ public class UIController implements Initializable {
         }
         );
 
-        // NEW AC ITEM                                                                                  < - - - - - WAT
-        // HALP
+        // NEW AC ITEM
         newACItem.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                Stage newACItemDia = new Stage();
-                TextField usrName = new TextField(), usrType = new TextField(), usrBonus = new TextField();
-
-                VBox base = new VBox();
-
-                base.getChildren().add(new Label("Name:"));
-                base.getChildren().add(usrName);
-
-                base.getChildren().add(new Label("Type:"));
-                base.getChildren().add(usrType);
-
-                base.getChildren().add(new Label("Bonus:"));
-                base.getChildren().add(usrBonus);
-
-                Button confirm = new Button("Ok"), cancel = new Button("Cancel");
-
-                HBox choices = new HBox(confirm, cancel);
-
-                choices.setSpacing(50);
-                choices.setAlignment(Pos.CENTER);
-
-                base.setSpacing(12);
-                base.setAlignment(Pos.CENTER);
-
-                base.getChildren().add(choices);
-
-                newACItemDia.setScene(new Scene(base));
-                newACItemDia.show();
-
-                confirm.setOnAction(new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent e) {
-
-                    }
-                });
-            }
-        }
-        );
-
-        // NEW ARMOR
-        newGear.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
                 Stage newGearDia = new Stage();
@@ -431,10 +396,13 @@ public class UIController implements Initializable {
                 base.getChildren().add(usrType);
 
                 GridPane bonusPenalty = new GridPane();
-                bonusPenalty.add(new Label("Bonus"), 0, 0);
+                bonusPenalty.add(new Label("Bonus:"), 0, 0);
                 bonusPenalty.add(usrBonus, 0, 1);
                 bonusPenalty.add(new Label("Penalty:"), 1, 0);
                 bonusPenalty.add(usrPenalty, 1, 1);
+                bonusPenalty.setVgap(5);
+                bonusPenalty.setHgap(10);
+                bonusPenalty.setMaxSize(800, 400);
 
                 base.getChildren().add(bonusPenalty);
 
@@ -457,10 +425,13 @@ public class UIController implements Initializable {
                 choices.setSpacing(50);
                 choices.setAlignment(Pos.CENTER);
 
+                base.setPadding(new Insets(10, 20, 20, 20));
                 base.setSpacing(12);
                 base.setAlignment(Pos.CENTER);
 
                 base.getChildren().add(choices);
+                newGearDia.setScene(new Scene(base));
+                newGearDia.show();
 
                 confirm.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
@@ -481,6 +452,260 @@ public class UIController implements Initializable {
             }
         }
         );
+
+        // NEW ITEMS
+        newGear.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Stage newGearDia = new Stage();
+                TextField usrName = new TextField(), usrValue = new TextField(), usrLocation = new TextField(),
+                        usrType = new TextField(), usrDesc = new TextField();
+                VBox base = new VBox();
+
+                base.getChildren().add(new Label("Name:"));
+                base.getChildren().add(usrName);
+
+                base.getChildren().add(new Label("Value:"));
+                base.getChildren().add(usrValue);
+
+                base.getChildren().add(new Label("Location:"));
+                base.getChildren().add(usrLocation);
+
+                base.getChildren().add(new Label("Type:"));
+                base.getChildren().add(usrType);
+
+                base.getChildren().add(new Label("Description:"));
+                base.getChildren().add(usrDesc);
+
+                Button confirm = new Button("Ok"), cancel = new Button("Cancel");
+
+                HBox choices = new HBox(confirm, cancel);
+
+                choices.setSpacing(50);
+                choices.setAlignment(Pos.CENTER);
+
+                base.setPadding(new Insets(10, 20, 20, 20));
+                base.setSpacing(12);
+                base.setAlignment(Pos.CENTER);
+
+                base.getChildren().add(choices);
+                newGearDia.setScene(new Scene(base));
+                newGearDia.show();
+
+                confirm.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent e) {
+                        theSheet.getItems().add(new Item(usrName.getText(), parse(usrValue.getText()), usrLocation.getText(), usrType.getText(), usrDesc.getText()));
+                        FlowPane parent = (FlowPane) newGear.getParent();
+                        parent.getChildren().add(new Button(usrName.getText()));
+                        newGearDia.close();
+                    }
+                });
+
+                cancel.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent e) {
+                        newGearDia.close();
+                    }
+                });
+            }
+        }
+        );
+
+        // NEW SPELLS: 0
+        newLevel0.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(0);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 1
+        newLevel1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(1);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 2
+        newLevel2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(2);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 3
+        newLevel3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(3);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 4
+        newLevel0.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(4);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 5
+        newLevel5.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(5);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 6
+        newLevel6.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(6);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 7
+        newLevel7.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(7);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 8
+        newLevel8.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(8);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: 9
+        newLevel9.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(9);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+
+        // NEW SPELLS: SPELL-LIKE
+        newSpellLike.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Spell newThing = genNewSpell(-1);
+                theSheet.getSpells().add(newThing);
+                FlowPane parent = (FlowPane) newLevel0.getParent();
+                parent.getChildren().add(new Button(newThing.getName()));
+            }
+        });
+        /*
+            Logic for buttons:
+        when they are created, add eventHandlers that will get from theSheet the thing and set the text to 
+        their respective things; new method for displaying stuff and re-saving AS SAME OBJECT
+         */
+    }
+
+    /**
+     * @param level Level of spell to be created
+     * @return returns a new Spell with all fields but level dictated by user
+     */
+    private Spell genNewSpell(int level) {
+        Stage newSpellDia = new Stage();
+        TextField usrName = new TextField(), usrSchool = new TextField(), usrSubSchool = new TextField(),
+                usrPrepared = new TextField(), usrCast = new TextField(), usrNotes = new TextField(),
+                usrDesc = new TextField();
+        VBox base = new VBox();
+
+        base.getChildren().add(new Label("Name:"));
+        base.getChildren().add(usrName);
+
+        base.getChildren().add(new Label("School:"));
+        base.getChildren().add(usrSchool);
+
+        base.getChildren().add(new Label("SubSchool:"));
+        base.getChildren().add(usrSubSchool);
+
+        base.getChildren().add(new Label("Prepared:"));
+        base.getChildren().add(usrPrepared);
+
+        base.getChildren().add(new Label("Cast:"));
+        base.getChildren().add(usrCast);
+
+        base.getChildren().add(new Label("Notes:"));
+        base.getChildren().add(usrNotes);
+
+        base.getChildren().add(new Label("Description:"));
+        base.getChildren().add(usrDesc);
+
+        Button confirm = new Button("Ok"), cancel = new Button("Cancel");
+
+        HBox choices = new HBox(confirm, cancel);
+
+        choices.setSpacing(50);
+        choices.setAlignment(Pos.CENTER);
+
+        base.setPadding(new Insets(10, 20, 20, 20));
+        base.setSpacing(12);
+        base.setAlignment(Pos.CENTER);
+
+        base.getChildren().add(choices);
+        newSpellDia.setScene(new Scene(base));
+
+        confirm.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                newSpell = new Spell(usrName.getText(), level, usrSchool.getText(),
+                        usrSubSchool.getText(), parse(usrPrepared.getText()),
+                        parse(usrCast.getText()), usrNotes.getText(), usrDesc.getText());
+                newSpellDia.close();
+            }
+        });
+
+        cancel.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                newSpell = null;
+                newSpellDia.close();
+            }
+        });
+
+        newSpellDia.showAndWait();
+
+        return newSpell;
     }
 
     private void update() {
@@ -774,13 +999,43 @@ public class UIController implements Initializable {
         useMagicDeviceBonus.setText((bonus == 0) ? "" : bonus + "");
 
     }
-    
+
     /**
      * @param s String to be parsed to int
      * @return Returns 0 if parse was unsuccessful, int of string if successful
      */
     private Integer parse(String s) {
-        TryParseIntResult thing = ProgramUtil.tryParseInt(s);
+        TryParseIntResult thing = new TryParseIntResult(false, 0);
+        try {
+            thing = ProgramUtil.tryParseInt(s);
+        } catch (NumberFormatException e) {
+            Stage noEmpty = new Stage();
+            VBox bad = new VBox(new Label("Input cannot be empty."));
+            Button fine = new Button("Ok");
+            bad.getChildren().add(fine);
+            noEmpty.setScene(new Scene(bad));
+            noEmpty.show();
+            fine.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent e) {
+                    noEmpty.close();
+                }
+            });
+        }
         return (thing.didParse) ? thing.result : 0;
+    }
+
+    /**
+     * @return the newSpell
+     */
+    public Spell getNewSpell() {
+        return newSpell;
+    }
+
+    /**
+     * @param newSpell the newSpell to set
+     */
+    public void setNewSpell(Spell newSpell) {
+        this.newSpell = newSpell;
     }
 }
