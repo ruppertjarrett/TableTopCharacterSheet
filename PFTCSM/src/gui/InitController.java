@@ -21,12 +21,13 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 import models.CharacterSheet;
 
 public class InitController implements Initializable {
 
     public static CharacterSheet theSheet = new CharacterSheet();
-    
+
     @FXML
     private Button cont;
 
@@ -121,11 +122,11 @@ public class InitController implements Initializable {
             e.printStackTrace();
             return;
         }
-        Stage closeMe = (Stage) cont.getScene().getWindow();
-        closeMe.close();
-        Scene scene = new Scene(root, 815, 615);
+        ((Stage) cont.getScene().getWindow()).close();
+        Scene scene = new Scene(root, 930, 620);
         Stage stage = new Stage();
-        stage.setResizable(false);
+        stage.setResizable(true);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("boot.png")));
         stage.setTitle("PathFinder Character Sheet Manager");
         stage.setScene(scene);
         stage.show();

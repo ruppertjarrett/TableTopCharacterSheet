@@ -7,8 +7,6 @@ import enums.Gender;
 import enums.Race;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -640,6 +638,33 @@ public class UIController implements Initializable {
     }
 
     /**
+     * Method to deal with viewing of objects based on what flowpane they are
+     * in; can handle weapon, armor, item, and ability inputs
+     *
+     * @param btn button that gets clicked to view the item
+     */
+    private void addHandlerToButton(Button btn) {
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                // Re-create the necessary stage for the appropriate thing, with option to delete it
+                // Or just put the toString of the object in a big label? why not
+                if (btn.getParent().getChildrenUnmodifiable().contains(newWeapon)) {
+                    // It's a weapon button
+                } else if (btn.getParent().getChildrenUnmodifiable().contains(newGear)) {
+                    // It's in the random item area
+                } else if (btn.getParent().getChildrenUnmodifiable().contains(newSpecialAbility)) {
+                    // It's in ONE OF THE ABILITIES
+                } else if (btn.getParent().getChildrenUnmodifiable().contains(newACItem)) {
+                    // It's in the armor section
+                } else {
+                    System.out.println("There was an issue figuring out the parent of the " + btn.getText() + " button.");
+                }
+            }
+        });
+    }
+
+    /**
      * @param level Level of spell to be created
      * @return returns a new Spell with all fields but level dictated by user
      */
@@ -684,6 +709,7 @@ public class UIController implements Initializable {
 
         base.getChildren().add(choices);
         newSpellDia.setScene(new Scene(base));
+        newSpellDia.setTitle("New Spell");
 
         confirm.setOnAction(new EventHandler<ActionEvent>() {
             @Override
